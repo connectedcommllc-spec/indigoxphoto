@@ -1,1 +1,1 @@
-console.log("Indigoxphoto site loaded");
+console.log("IndigoXPhoto site loaded");
