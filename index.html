@@ -1,797 +1,863 @@
-import React, { useMemo, useState } from "react";
-import { motion } from "framer-motion";
-import { Menu, X, ArrowRight, Play, Camera, Building2, Film, Mail, Phone, MapPin, CheckCircle2, Instagram } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndigoXPhoto | Luxury Real Estate Media</title>
+  <style>
+    :root{
+      --bg:#080808;
+      --bg2:#0d0d0d;
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.10);
+      --text:#f7f7f3;
+      --muted:rgba(255,255,255,.72);
+      --soft:rgba(255,255,255,.46);
+      --white:#fff;
+      --black:#000;
+      --radius:24px;
+      --radius-lg:34px;
+      --shadow:0 24px 60px rgba(0,0,0,.32);
+      --max:1360px;
+    }
 
-const brand = {
-  name: "Indigoxphoto",
-  tagline: "Luxury Real Estate Media",
-  email: "hello@indigoxphoto.com",
-  phone: "(661) 000-0000",
-  instagram: "@indigoxphoto",
-  website: "indigoxphoto.com",
-  markets: "Bakersfield • Las Vegas • Southern California",
-};
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,.06), transparent 26%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      color:var(--text);
+    }
 
-const navItems = [
-  { id: "home", label: "Home" },
-  { id: "portfolio", label: "Portfolio" },
-  { id: "services", label: "Services" },
-  { id: "about", label: "About" },
-  { id: "insights", label: "Insights" },
-  { id: "contact", label: "Contact" },
-];
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    button,input,select,textarea{font:inherit}
 
-const featuredProjects = [
-  {
-    title: "Seven Oaks Estate Launch",
-    location: "Bakersfield, CA",
-    market: "Bakersfield",
-    category: "Cinematic Listing Campaign",
-    image:
-      "https://images.unsplash.com/photo-1600607687644-c7f34f0c806f?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "Luxury visuals built to slow buyers down, show the flow of the home, and elevate the listing presentation.",
-  },
-  {
-    title: "Belcourt Twilight Campaign",
-    location: "Bakersfield, CA",
-    market: "Bakersfield",
-    category: "Photo + Vertical Reels",
-    image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "A polished launch package combining twilight imagery, social edits, and refined MLS-ready delivery.",
-  },
-  {
-    title: "Henderson Modern Feature",
-    location: "Las Vegas, NV",
-    market: "Las Vegas",
-    category: "Showcase Video",
-    image:
-      "https://images.unsplash.com/photo-1600047509782-20d39509f26d?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "A premium visual package designed to create an emotional sense of place for modern luxury buyers.",
-  },
-  {
-    title: "Hollywood Hills Presentation",
-    location: "Los Angeles, CA",
-    market: "Los Angeles",
-    category: "Luxury Marketing Suite",
-    image:
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "Editorial-style media built for agents positioning themselves above average listing content.",
-  },
-  {
-    title: "Silver Creek Listing Story",
-    location: "Bakersfield, CA",
-    market: "Bakersfield",
-    category: "Cinematic Reel + Stills",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "Story-driven imagery and motion designed to help buyers picture life inside the home.",
-  },
-  {
-    title: "Desert Luxury Feature",
-    location: "Las Vegas, NV",
-    market: "Las Vegas",
-    category: "Photo + Website + Ads",
-    image:
-      "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "A complete launch package built to support website placement, social reach, and branded marketing.",
-  },
-  {
-    title: "Sunset Strip Editorial Launch",
-    location: "Los Angeles, CA",
-    market: "Los Angeles",
-    category: "Cinematic Listing Film",
-    image:
-      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "Luxury editorial visuals designed for agents targeting design-focused buyers and elevated presentation.",
-  },
-  {
-    title: "Summerlin Luxe Media Suite",
-    location: "Las Vegas, NV",
-    market: "Las Vegas",
-    category: "Photo + Reel Campaign",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "A polished launch package crafted for premium digital marketing, social media, and listing promotion.",
-  },
-  {
-    title: "Westchester Modern Showcase",
-    location: "Los Angeles, CA",
-    market: "Los Angeles",
-    category: "Property Website + Film",
-    image:
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80",
-    summary:
-      "A refined media system that pairs architecture-forward visuals with a polished branded launch experience.",
-  },
-];
+    .container{
+      width:min(calc(100% - 36px), var(--max));
+      margin:0 auto;
+    }
 
-const services = [
-  {
-    title: "Luxury Photography",
-    icon: Camera,
-    text: "Crisp, editorial-grade imagery for listings that need a cleaner, more premium presentation.",
-    bullets: ["HDR photography", "MLS-ready delivery", "Detail and twilight options"],
-  },
-  {
-    title: "Cinematic Listing Video",
-    icon: Film,
-    text: "Narrative-driven video that captures movement, scale, detail, and the emotional feel of the property.",
-    bullets: ["Horizontal showcase films", "Vertical social edits", "Luxury pacing and storytelling"],
-  },
-  {
-    title: "Drone Photo + Video",
-    icon: Play,
-    text: "Aerial visuals that highlight land, architecture, neighborhood context, and premium exterior presentation.",
-    bullets: ["FAA-compliant aerial capture", "Hero exterior angles", "Lot and location context"],
-  },
-  {
-    title: "Matterport 3D Tours",
-    icon: Building2,
-    text: "Immersive 3D walkthroughs that help buyers understand layout, flow, and spatial relationships before stepping inside.",
-    bullets: ["Matterport scan and hosting", "Interactive walkthrough", "Floor plan support"],
-  },
-  {
-    title: "Zillow Showcase + 3D",
-    icon: Building2,
-    text: "Premium listing assets designed to help properties stand out across Zillow and modern listing platforms.",
-    bullets: ["Zillow-ready assets", "Showcase support", "Premium add-ons"],
-  },
-  {
-    title: "Social Media Reels + Vertical Video", 
-    icon: Film,
-    text: "Short-form vertical video designed for Instagram Reels, TikTok, and YouTube Shorts to promote listings and agent branding.",
-    bullets: ["Instagram Reels", "TikTok + YouTube Shorts", "Agent branded vertical edits"],
-  },
-  {
-    title: "Real Twilight Photography + Virtual Twilight",
-    icon: Camera,
-    text: "True sunset twilight shoots or high-end virtual day‑to‑dusk edits that create dramatic luxury curb appeal for premium listings.",
-    bullets: ["On-site sunset twilight shoots", "Virtual day-to-dusk edits", "Luxury exterior presentation"],
-  },
-  {
-    title: "Virtual Staging",
-    icon: Building2,
-    text: "Digitally furnished interiors that help vacant spaces feel more complete, inviting, and marketable.",
-    bullets: ["Vacant room staging", "Style-matched furniture", "Clean presentation for buyers"],
-  },
-  {
-    title: "Floor Plans",
-    icon: Building2,
-    text: "Clear floor plan assets that help buyers understand flow, layout, and room relationships at a glance.",
-    bullets: ["2D floor plans", "Measured layout visuals", "Easy-to-read delivery"],
-  },
-  {
-    title: "Property Website + Marketing Kit",
-    icon: Play,
-    text: "A refined launch package with branded visuals, polished presentation, and strong agent positioning.",
-    bullets: ["Property websites", "Flyers and ad creatives", "Social launch assets"],
-  },
-];
+    .eyebrow{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.34em;
+      color:var(--soft);
+      margin-bottom:16px;
+    }
 
-const insights = [
-  {
-    title: "Why cinematic listing content helps luxury homes feel more valuable",
-    category: "Strategy",
-    excerpt:
-      "The goal is not just to show a room. It is to create emotional clarity, show flow, and make the home feel more memorable.",
-  },
-  {
-    title: "What premium real estate media communicates to sellers before you win the listing",
-    category: "Presentation",
-    excerpt:
-      "When an agent shows high-end media consistently, the brand perception rises before the presentation even begins.",
-  },
-  {
-    title: "How vertical reels should support a listing instead of just chasing views",
-    category: "Social Content",
-    excerpt:
-      "Luxury reels work best when they attract attention while still preserving detail, atmosphere, and credibility.",
-  },
-];
+    .section-title{
+      margin:0;
+      font-size:clamp(34px,5vw,60px);
+      line-height:1;
+      letter-spacing:-.05em;
+    }
 
-const marketTabs = ["Bakersfield", "Los Angeles", "Las Vegas"];
+    .section-copy{
+      margin:18px 0 0;
+      max-width:820px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.8;
+    }
 
-const testimonials = [
-  {
-    quote:
-      "The presentation looked elevated from the first click. It made the listing feel more expensive and gave us stronger marketing materials immediately.",
-    name: "Luxury Agent Partner",
-  },
-  {
-    quote:
-      "The cinematic content did what fast-cut reels do not. Buyers could actually feel the layout and mood of the home.",
-    name: "Listing Team Client",
-  },
-  {
-    quote:
-      "Everything felt polished, modern, and on-brand. It positioned us above competitors in our listing presentation.",
-    name: "Brokerage Marketing Client",
-  },
-];
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid var(--line);
+      background:rgba(8,8,8,.78);
+      backdrop-filter:blur(14px);
+    }
 
-function Container({ children, className = "" }) {
-  return <div className={`mx-auto w-full max-w-7xl px-6 lg:px-10 ${className}`}>{children}</div>;
-}
+    .nav-inner{
+      min-height:88px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
 
-function SectionHeading({ eyebrow, title, text, align = "left" }) {
-  return (
-    <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <div className="text-xs uppercase tracking-[0.35em] text-white/45">{eyebrow}</div>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{title}</h2>
-      {text ? <p className="mt-5 text-base leading-8 text-white/65 md:text-lg">{text}</p> : null}
+    .brand{
+      font-size:18px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+
+    .brand small{
+      display:block;
+      margin-top:6px;
+      font-size:11px;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      color:var(--soft);
+      font-weight:500;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:28px;
+      margin:0;
+      padding:0;
+      color:rgba(255,255,255,.84);
+      font-size:15px;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      padding:14px 22px;
+      background:#fff;
+      color:#000;
+      font-weight:600;
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.22), rgba(0,0,0,.76)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80") center/cover;
+      opacity:.44;
+      transform:scale(1.03);
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      min-height:calc(100vh - 88px);
+      display:grid;
+      align-items:center;
+      padding:90px 0 80px;
+    }
+
+    .hero-content{
+      max-width:1020px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.05);
+      color:rgba(255,255,255,.74);
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      margin-bottom:28px;
+    }
+
+    .hero h1{
+      margin:0;
+      font-size:clamp(56px,8vw,112px);
+      line-height:.94;
+      letter-spacing:-.06em;
+    }
+
+    .hero p{
+      margin:26px auto 0;
+      max-width:860px;
+      color:rgba(255,255,255,.76);
+      font-size:clamp(18px,2vw,24px);
+      line-height:1.75;
+    }
+
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:36px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:16px 24px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      font-weight:600;
+    }
+
+    .btn.primary{
+      background:#fff;
+      color:#000;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:58px;
+    }
+
+    .hero-stat{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
+      border-radius:26px;
+      padding:22px;
+      text-align:left;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-stat strong{
+      display:block;
+      font-size:34px;
+      letter-spacing:-.05em;
+      margin-bottom:8px;
+    }
+
+    .hero-stat span{
+      font-size:14px;
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    .markets{
+      padding:92px 0 26px;
+    }
+
+    .tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .tab{
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:rgba(255,255,255,.82);
+      border-radius:999px;
+      padding:14px 18px;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .tab.active,.tab:hover{
+      background:#fff;
+      color:#000;
+    }
+
+    .portfolio{
+      padding:12px 0 92px;
+    }
+
+    .market-heading{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      margin-bottom:24px;
+    }
+
+    .market-heading h3{
+      margin:0;
+      font-size:clamp(28px,4vw,42px);
+      letter-spacing:-.04em;
+    }
+
+    .market-heading p{
+      margin:0;
+      max-width:700px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .grid{
+      display:grid;
+      gap:24px;
+    }
+
+    .portfolio-grid{
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:var(--panel);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .25s ease,border-color .25s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .card-image{
+      aspect-ratio:16/11;
+      background-size:cover;
+      background-position:center;
+    }
+
+    .card-body{
+      padding:22px;
+    }
+
+    .card-kicker{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      color:var(--soft);
+      font-size:11px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+
+    .card h4{
+      margin:14px 0 10px;
+      font-size:28px;
+      line-height:1.08;
+      letter-spacing:-.04em;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    .services{
+      padding:92px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+    }
+
+    .services-grid{
+      margin-top:40px;
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .service-card{
+      padding:28px;
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      box-shadow:var(--shadow);
+    }
+
+    .service-card h3{
+      margin:0 0 12px;
+      font-size:24px;
+      letter-spacing:-.03em;
+    }
+
+    .service-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    .service-list{
+      margin:18px 0 0;
+      padding:0;
+      list-style:none;
+    }
+
+    .service-list li{
+      margin:10px 0;
+      color:rgba(255,255,255,.84);
+      font-size:14px;
+    }
+
+    .proof{
+      padding:92px 0;
+    }
+
+    .proof-grid{
+      margin-top:36px;
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .proof-card{
+      padding:34px;
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:var(--panel);
+    }
+
+    .proof-card strong{
+      display:block;
+      font-size:clamp(38px,6vw,64px);
+      line-height:1;
+      letter-spacing:-.05em;
+      margin-bottom:10px;
+    }
+
+    .proof-card span{
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .contact{
+      padding:0 0 102px;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-top:40px;
+    }
+
+    .contact-card,.form-card{
+      border:1px solid var(--line);
+      background:var(--panel);
+      border-radius:32px;
+      padding:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-card h3{
+      margin:0 0 18px;
+      font-size:30px;
+      letter-spacing:-.04em;
+    }
+
+    .contact-lines{
+      display:grid;
+      gap:18px;
+      color:rgba(255,255,255,.84);
+    }
+
+    .contact-lines div{
+      padding:16px 18px;
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .form-grid{
+      display:grid;
+      gap:14px;
+    }
+
+    .field,.select,.textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.28);
+      color:#fff;
+      border-radius:18px;
+      padding:16px 18px;
+      outline:none;
+      font-size:15px;
+    }
+
+    .textarea{
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .footer{
+      border-top:1px solid var(--line);
+      padding:30px 0 52px;
+      color:var(--soft);
+      font-size:14px;
+      text-align:center;
+    }
+
+    @media (max-width:1100px){
+      .portfolio-grid,.services-grid,.proof-grid,.contact-wrap,.hero-stats{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width:840px){
+      .nav{position:static}
+      .nav-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:18px 0;
+      }
+      .nav-links{
+        flex-wrap:wrap;
+        gap:16px;
+      }
+      .market-heading{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .portfolio-grid,.services-grid,.proof-grid,.contact-wrap,.hero-stats{
+        grid-template-columns:1fr;
+      }
+      .hero-inner{min-height:auto}
+      .container{width:min(calc(100% - 26px), var(--max))}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">IndigoXPhoto<small>Luxury Real Estate Media</small></a>
+      <ul class="nav-links">
+        <li><a href="#markets">Markets</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="#contact">Book a Shoot</a>
     </div>
-  );
-}
+  </nav>
 
-function Header({ page, setPage }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur-xl">
-      <Container className="flex items-center justify-between py-4">
-        <button className="text-left" onClick={() => setPage("home")}>
-          <div className="text-xs uppercase tracking-[0.45em] text-white/50">{brand.name}</div>
-          <div className="mt-1 text-sm text-white/75">{brand.tagline}</div>
-        </button>
-
-        <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => setPage(item.id)}
-              className={`text-sm transition ${page === item.id ? "text-white" : "text-white/65 hover:text-white"}`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
-
-        <div className="hidden md:block">
-          <button
-            onClick={() => setPage("contact")}
-            className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-black transition hover:opacity-90"
-          >
-            Book a Shoot
-          </button>
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-pill">Cinematic media for premium listings</div>
+        <h1>Built to make listings feel expensive before the first showing.</h1>
+        <p>Luxury photography, cinematic listing films, social media reels, drone coverage, twilight shoots, Matterport 3D tours, and branded launch assets for agents who want premium presentation in Bakersfield, Los Angeles, and Las Vegas.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#portfolio">View Portfolio</a>
+          <a class="btn" href="#services">Explore Services</a>
         </div>
-
-        <button
-          onClick={() => setOpen(!open)}
-          className="rounded-2xl border border-white/10 p-3 text-white md:hidden"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
-      </Container>
-
-      {open && (
-        <div className="border-t border-white/10 bg-neutral-950 md:hidden">
-          <Container className="flex flex-col gap-2 py-4">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => {
-                  setPage(item.id);
-                  setOpen(false);
-                }}
-                className={`rounded-2xl px-4 py-3 text-left text-sm ${page === item.id ? "bg-white text-black" : "bg-white/[0.03] text-white/80"}`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </Container>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>Luxury</strong>
+            <span>Editorial real estate visuals designed to elevate agents, listings, and seller perception.</span>
+          </div>
+          <div class="hero-stat">
+            <strong>3 Markets</strong>
+            <span>Organized around Bakersfield, Los Angeles, and Las Vegas so the brand feels established and market-aware.</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Full Stack</strong>
+            <span>From stills and film to reels, twilight, drone, Matterport, websites, and launch assets.</span>
+          </div>
         </div>
-      )}
-    </header>
-  );
-}
-
-function Hero({ setPage }) {
-  return (
-    <section className="relative overflow-hidden border-b border-white/10">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80')" }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/65 to-neutral-950" />
-      <Container className="relative py-20 md:py-28 lg:py-36">
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl">
-          <div className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/70 backdrop-blur">
-            Cinematic real estate media for elevated listing brands
-          </div>
-          <h1 className="mt-7 text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
-            Built to make listings feel premium before the first showing.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72 md:text-xl">
-            Indigoxphoto creates luxury real estate photography, cinematic listing films, vertical reels, and branded launch assets for agents who want stronger presentation, stronger perception, and stronger marketing.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <button
-              onClick={() => setPage("portfolio")}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-medium text-black transition hover:opacity-90"
-            >
-              View Portfolio <ArrowRight size={16} />
-            </button>
-            <button
-              onClick={() => setPage("services")}
-              className="rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-medium text-white transition hover:bg-white/10"
-            >
-              Explore Services
-            </button>
-          </div>
-        </motion.div>
-
-        <div className="mt-16 grid gap-4 md:grid-cols-3">
-          {[
-            "Luxury listing photography",
-            "Cinematic showcase video",
-            "Property websites + launch assets",
-          ].map((item) => (
-            <div key={item} className="rounded-[28px] border border-white/10 bg-white/[0.04] px-5 py-5 text-sm text-white/75 backdrop-blur">
-              {item}
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function TrustStrip() {
-  return (
-    <section className="border-b border-white/10 bg-neutral-950">
-      <Container className="grid grid-cols-2 gap-4 py-8 text-center sm:grid-cols-3 lg:grid-cols-6">
-        {["KW Preferred", "The Agency", "Luxury Listings", "Developers", "Builders", "Editorial Look"].map((logo) => (
-          <div key={logo} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-xs uppercase tracking-[0.28em] text-white/45">
-            {logo}
-          </div>
-        ))}
-      </Container>
-    </section>
-  );
-}
-
-function MarketTabs({ selectedMarket, setSelectedMarket, className = "" }) {
-  return (
-    <div className={`flex flex-wrap gap-3 ${className}`}>
-      {marketTabs.map((market) => (
-        <button
-          key={market}
-          onClick={() => setSelectedMarket(market)}
-          className={`rounded-full px-5 py-3 text-sm font-medium transition ${
-            selectedMarket === market
-              ? "bg-white text-black"
-              : "border border-white/12 bg-white/[0.03] text-white/75 hover:bg-white/[0.06]"
-          }`}
-        >
-          {market}
-        </button>
-      ))}
+      </div>
     </div>
-  );
-}
+  </section>
 
-function PortfolioPage() {
-  const [selectedMarket, setSelectedMarket] = useState("Bakersfield");
-  const filteredProjects = featuredProjects.filter((project) => project.market === selectedMarket);
-
-  return (
-    <div>
-      <section className="border-b border-white/10 py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Portfolio"
-            title="Featured listing campaigns by market"
-            text="A portfolio designed to feel closer to a luxury brokerage presentation than a generic photographer gallery. Each tab lets visitors browse Bakersfield, Los Angeles, and Las Vegas work separately."
-          />
-          <MarketTabs selectedMarket={selectedMarket} setSelectedMarket={setSelectedMarket} className="mt-10" />
-        </Container>
-      </section>
-      <Container className="py-16">
-        <div className="mb-8">
-          <div className="text-xs uppercase tracking-[0.3em] text-white/40">Current market</div>
-          <h3 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">{selectedMarket}</h3>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProjects.map((project) => (
-            <motion.article key={project.title} whileHover={{ y: -4 }} className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/20">
-              <div className="h-72 bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }} />
-              <div className="p-6">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="text-xs uppercase tracking-[0.3em] text-white/45">{project.category}</div>
-                  <div className="text-xs uppercase tracking-[0.25em] text-white/35">{project.market}</div>
-                </div>
-                <h3 className="mt-3 text-2xl font-medium">{project.title}</h3>
-                <p className="mt-2 text-sm text-white/55">{project.location}</p>
-                <p className="mt-4 leading-7 text-white/68">{project.summary}</p>
-                <button className="mt-6 inline-flex items-center gap-2 text-sm text-white/90 underline underline-offset-4">
-                  View Project <ArrowRight size={15} />
-                </button>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </Container>
+  <section class="markets" id="markets">
+    <div class="container">
+      <div class="eyebrow">Markets</div>
+      <h2 class="section-title">Premium real estate media by city.</h2>
+      <p class="section-copy">Use the tabs below to switch between Bakersfield, Los Angeles, and Las Vegas. This keeps the site feeling intentional, localized, and luxury-focused instead of generic.</p>
+      <div class="tabs">
+        <button class="tab active" data-market="bakersfield">Bakersfield</button>
+        <button class="tab" data-market="losangeles">Los Angeles</button>
+        <button class="tab" data-market="lasvegas">Las Vegas</button>
+      </div>
     </div>
-  );
-}
+  </section>
 
-function ServicesPage({ setPage }) {
-  return (
-    <div>
-      <section className="border-b border-white/10 py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Services"
-            title="A premium media stack for serious listing launches"
-            text="Structured for agents, teams, and developers who want high-end presentation across photo, video, vertical content, immersive assets, and branded launch materials."
-          />
-        </Container>
-      </section>
-      <Container className="py-16">
-        <div className="grid gap-6 lg:grid-cols-2">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <div key={service.title} className="rounded-[30px] border border-white/10 bg-white/[0.03] p-8">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-3 text-white">
-                    <Icon size={22} />
-                  </div>
-                  <h3 className="text-2xl font-medium">{service.title}</h3>
-                </div>
-                <p className="mt-5 leading-8 text-white/68">{service.text}</p>
-                <div className="mt-6 space-y-3">
-                  {service.bullets.map((bullet) => (
-                    <div key={bullet} className="flex items-center gap-3 text-white/78">
-                      <CheckCircle2 size={18} className="text-white/60" />
-                      <span>{bullet}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-14 rounded-[32px] border border-white/10 bg-gradient-to-r from-white/[0.06] to-white/[0.02] p-8 md:p-10">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <div className="text-xs uppercase tracking-[0.35em] text-white/45">Booking flow</div>
-              <h3 className="mt-3 text-2xl font-semibold md:text-4xl">Built to convert premium listing inquiries cleanly.</h3>
-              <p className="mt-4 max-w-2xl text-white/68 leading-8">
-                Add your exact square-footage pricing, add-ons, KW perks, Zillow Showcase options, and turnaround promises here to make this site truly live-ready.
-              </p>
-            </div>
-            <button onClick={() => setPage("contact")} className="rounded-2xl bg-white px-6 py-4 text-sm font-medium text-black transition hover:opacity-90">
-              Request Pricing
-            </button>
-          </div>
-        </div>
-      </Container>
-    </div>
-  );
-}
-
-function AboutPage({ setPage }) {
-  return (
-    <div>
-      <section className="border-b border-white/10 py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="About"
-            title="A visual brand built around luxury presentation"
-            text="Indigoxphoto is positioned to feel less like a basic media vendor and more like a premium marketing partner for high-end real estate listings."
-          />
-        </Container>
-      </section>
-      <Container className="grid gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <div className="overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03]">
-          <div className="h-[460px] bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80')" }} />
-        </div>
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="market-heading">
         <div>
-          <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">Luxury visuals. Cleaner branding. Better agent perception.</h3>
-          <p className="mt-6 leading-8 text-white/68">
-            This site structure is intentionally modeled after the confidence and polish of a luxury team website, then reworked for a real estate media company. The result is a brand presentation that feels established, modern, and premium from the first click.
-          </p>
-          <p className="mt-5 leading-8 text-white/68">
-            Use this page to add your real story, your markets, brokerage partnerships, same-day delivery options, and the specific reasons agents choose you over generic media providers.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {[
-              "Luxury editorial aesthetic",
-              "Agent-first service model",
-              "Fast and polished delivery",
-              "Built for listings and brand growth",
-            ].map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-white/78">
-                {item}
-              </div>
-            ))}
-          </div>
-          <button onClick={() => setPage("contact")} className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-medium text-black transition hover:opacity-90">
-            Start a Project <ArrowRight size={16} />
-          </button>
+          <div class="eyebrow">Current Market</div>
+          <h3 id="marketTitle">Bakersfield</h3>
         </div>
-      </Container>
+        <p id="marketCopy">Cinematic campaigns and luxury listing visuals tailored for Bakersfield agents who want stronger presentation and better seller confidence.</p>
+      </div>
+      <div class="grid portfolio-grid" id="portfolioGrid"></div>
     </div>
-  );
-}
+  </section>
 
-function InsightsPage() {
-  return (
-    <div>
-      <section className="border-b border-white/10 py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Insights"
-            title="Authority content for search, trust, and positioning"
-            text="Luxury team websites use editorial content to reinforce credibility. Here, that becomes a media strategy journal that helps build SEO and seller confidence."
-          />
-        </Container>
-      </section>
-      <Container className="py-16">
-        <div className="grid gap-6 md:grid-cols-3">
-          {insights.map((post) => (
-            <article key={post.title} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-7">
-              <div className="text-xs uppercase tracking-[0.32em] text-white/45">{post.category}</div>
-              <h3 className="mt-4 text-2xl font-medium leading-tight">{post.title}</h3>
-              <p className="mt-4 leading-7 text-white/66">{post.excerpt}</p>
-              <button className="mt-8 text-sm text-white/90 underline underline-offset-4">Read Article</button>
-            </article>
-          ))}
+  <section class="services" id="services">
+    <div class="container">
+      <div class="eyebrow">Services</div>
+      <h2 class="section-title">A real luxury media stack for serious listing launches.</h2>
+      <p class="section-copy">Built around what premium real estate photographers and videographers actually sell, including Matterport 3D tours, real twilight shoots, social media reels, drone, Zillow Showcase, and branded marketing assets.</p>
+      <div class="grid services-grid">
+        <div class="service-card">
+          <h3>Luxury Photography</h3>
+          <p>Clean editorial stills built to make listings feel elevated, polished, and more premium online.</p>
+          <ul class="service-list">
+            <li>HDR photography</li>
+            <li>MLS-ready delivery</li>
+            <li>Detail and twilight options</li>
+          </ul>
         </div>
-      </Container>
+        <div class="service-card">
+          <h3>Cinematic Listing Video</h3>
+          <p>Story-driven listing films that show layout, mood, detail, and what it feels like to live there.</p>
+          <ul class="service-list">
+            <li>Horizontal showcase films</li>
+            <li>Luxury pacing</li>
+            <li>Agent brand positioning</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Drone Photo + Video</h3>
+          <p>Aerial coverage that shows lot, architecture, neighborhood context, and overall scale.</p>
+          <ul class="service-list">
+            <li>FAA-compliant capture</li>
+            <li>Hero exterior angles</li>
+            <li>Community context</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Matterport 3D Tours</h3>
+          <p>Immersive walkthroughs that help buyers understand layout and flow before stepping inside.</p>
+          <ul class="service-list">
+            <li>Matterport scans</li>
+            <li>Interactive tours</li>
+            <li>Floor plan support</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Zillow Showcase + 3D</h3>
+          <p>Premium listing assets designed to help homes stand out across Zillow and top listing platforms.</p>
+          <ul class="service-list">
+            <li>Zillow-ready assets</li>
+            <li>Showcase support</li>
+            <li>Premium add-ons</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Social Media Reels + Vertical Video</h3>
+          <p>Short-form listing content optimized for Instagram Reels, TikTok, and YouTube Shorts.</p>
+          <ul class="service-list">
+            <li>Instagram Reels</li>
+            <li>TikTok + YouTube Shorts</li>
+            <li>Agent branded vertical edits</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Real Twilight Photography + Virtual Twilight</h3>
+          <p>True sunset twilight shoots or luxury day-to-dusk edits that create dramatic curb appeal.</p>
+          <ul class="service-list">
+            <li>On-site sunset shoots</li>
+            <li>Virtual twilight edits</li>
+            <li>Luxury exterior presentation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Virtual Staging + Floor Plans</h3>
+          <p>Digitally furnished interiors and clear layout visuals that help buyers understand the home faster.</p>
+          <ul class="service-list">
+            <li>Vacant room staging</li>
+            <li>2D floor plans</li>
+            <li>Measured layout visuals</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Property Website + Marketing Kit</h3>
+          <p>Branded presentation assets that make agents look more established and seller-ready.</p>
+          <ul class="service-list">
+            <li>Property websites</li>
+            <li>Flyers and ad creatives</li>
+            <li>Launch assets</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  );
-}
+  </section>
 
-function ContactPage() {
-  return (
-    <div>
-      <section className="border-b border-white/10 py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Contact"
-            title="Book your next listing campaign"
-            text="Built for agents and teams who want a stronger visual presentation, cleaner marketing, and a more premium online impression."
-          />
-        </Container>
-      </section>
-      <Container className="grid gap-8 py-16 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-8">
-          <div className="space-y-6 text-white/75">
-            <div className="flex items-center gap-4"><Mail size={18} /><span>{brand.email}</span></div>
-            <div className="flex items-center gap-4"><Phone size={18} /><span>{brand.phone}</span></div>
-            <div className="flex items-center gap-4"><Instagram size={18} /><span>{brand.instagram}</span></div>
-            <div className="flex items-center gap-4"><MapPin size={18} /><span>{brand.markets}</span></div>
-          </div>
-          <div className="mt-10 rounded-[24px] border border-white/10 bg-black/25 p-6">
-            <div className="text-xs uppercase tracking-[0.32em] text-white/45">Suggested live details to add</div>
-            <div className="mt-4 space-y-3 text-white/68">
-              <p>Exact pricing packages</p>
-              <p>Booking calendar integration</p>
-              <p>Real client testimonials</p>
-              <p>Actual portfolio video embeds</p>
-              <p>CRM or inquiry form hookup</p>
-            </div>
+  <section class="proof">
+    <div class="container">
+      <div class="eyebrow">Authority</div>
+      <h2 class="section-title">Positioned like a luxury media company, not a basic photographer site.</h2>
+      <p class="section-copy">This structure is built to support trust, stronger perceived value, and a more premium first impression from agents and sellers.</p>
+      <div class="grid proof-grid">
+        <div class="proof-card">
+          <strong>Premium</strong>
+          <span>Dark editorial styling, high-end spacing, stronger typography, and a more agency-level feel from the first click.</span>
+        </div>
+        <div class="proof-card">
+          <strong>Luxury</strong>
+          <span>Services and visuals organized around high-end listing presentation instead of generic real estate media deliverables.</span>
+        </div>
+        <div class="proof-card">
+          <strong>Marketed</strong>
+          <span>Built for photography, film, reels, Matterport, twilight, drone, and launch materials all in one brand system.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">Contact</div>
+      <h2 class="section-title">Book your next listing campaign.</h2>
+      <p class="section-copy">Designed for agents, teams, and developers who want a stronger online impression, cleaner branding, and premium listing media.</p>
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h3>IndigoXPhoto</h3>
+          <div class="contact-lines">
+            <div>hello@indigoxphoto.com</div>
+            <div>@indigoxphoto</div>
+            <div>Bakersfield • Los Angeles • Las Vegas</div>
+            <div>Luxury Photography • Video • Reels • Matterport • Twilight</div>
           </div>
         </div>
-
-        <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-8">
-          <div className="grid gap-4">
-            <input className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-white outline-none placeholder:text-white/25" placeholder="Name" />
-            <input className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-white outline-none placeholder:text-white/25" placeholder="Email" />
-            <input className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-white outline-none placeholder:text-white/25" placeholder="Phone" />
-            <select className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-white outline-none">
+        <div class="form-card">
+          <div class="form-grid">
+            <input class="field" placeholder="Name">
+            <input class="field" placeholder="Email">
+            <input class="field" placeholder="Phone">
+            <select class="select">
               <option>Service Needed</option>
               <option>Luxury Photography</option>
               <option>Cinematic Listing Video</option>
-              <option>Zillow Showcase</option>
+              <option>Drone Photo + Video</option>
+              <option>Matterport 3D Tours</option>
+              <option>Zillow Showcase + 3D</option>
+              <option>Social Media Reels + Vertical Video</option>
+              <option>Real Twilight Photography + Virtual Twilight</option>
               <option>Property Website + Marketing Kit</option>
             </select>
-            <textarea className="min-h-[180px] rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-white outline-none placeholder:text-white/25" placeholder="Tell us about the property, timing, location, and what assets you need" />
-            <button className="rounded-2xl bg-white px-6 py-4 text-sm font-medium text-black transition hover:opacity-90">Submit Inquiry</button>
+            <textarea class="textarea" placeholder="Tell us about the property, timeline, city, and what you need."></textarea>
+            <button class="btn primary">Submit Inquiry</button>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
-  );
-}
+  </section>
 
-function HomePage({ setPage }) {
-  const [selectedMarket, setSelectedMarket] = useState("Bakersfield");
-  const filteredProjects = featuredProjects.filter((project) => project.market === selectedMarket).slice(0, 3);
+  <footer class="footer">
+    <div class="container">IndigoXPhoto — Luxury Real Estate Media</div>
+  </footer>
 
-  return (
-    <div>
-      <Hero setPage={setPage} />
-      <TrustStrip />
+  <script>
+    const marketData = {
+      bakersfield: {
+        title: "Bakersfield",
+        copy: "Cinematic campaigns and luxury listing visuals tailored for Bakersfield agents who want stronger presentation and better seller confidence.",
+        items: [
+          {
+            kicker: "Cinematic Listing Campaign",
+            market: "Bakersfield",
+            title: "Seven Oaks Estate Launch",
+            copy: "Luxury visuals designed to slow buyers down, show flow, and elevate the overall listing presentation.",
+            image: "https://images.unsplash.com/photo-1600607687644-c7f34f0c806f?auto=format&fit=crop&w=1400&q=80"
+          },
+          {
+            kicker: "Photo + Vertical Reels",
+            market: "Bakersfield",
+            title: "Belcourt Twilight Campaign",
+            copy: "A polished launch package combining twilight imagery, social edits, and premium listing presentation.",
+            image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80"
+          },
+          {
+            kicker: "Cinematic Reel + Stills",
+            market: "Bakersfield",
+            title: "Silver Creek Listing Story",
+            copy: "Story-driven imagery and motion built to help buyers picture life inside the home.",
+            image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80"
+          }
+        ]
+      },
+      losangeles: {
+        title: "Los Angeles",
+        copy: "Refined editorial-style real estate media for Los Angeles listings that need a cleaner, design-forward, luxury presentation.",
+        items: [
+          {
+            kicker: "Luxury Marketing Suite",
+            market: "Los Angeles",
+            title: "Hollywood Hills Presentation",
+            copy: "Editorial-style media designed for agents targeting elevated branding and stronger seller-facing presentation.",
+            image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1400&q=80"
+          },
+          {
+            kicker: "Cinematic Listing Film",
+            market: "Los Angeles",
+            title: "Sunset Strip Editorial Launch",
+            copy: "Luxury film and stills created to feel architectural, refined, and premium from the first click.",
+            image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1400&q=80"
+          },
+          {
+            kicker: "Property Website + Film",
+            market: "Los Angeles",
+            title: "Westchester Modern Showcase",
+            copy: "A polished media system pairing design-forward visuals with a high-end branded launch experience.",
+            image: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=80"
+          }
+        ]
+      },
+      lasvegas: {
+        title: "Las Vegas",
+        copy: "Luxury real estate media built for Las Vegas agents who need dramatic presentation, stronger visuals, and premium digital launch assets.",
+        items: [
+          {
+            kicker: "Showcase Video",
+            market: "Las Vegas",
+            title: "Henderson Modern Feature",
+            copy: "A premium visual package designed to create emotion, atmosphere, and a stronger first impression online.",
+            image: "https://images.unsplash.com/photo-1600047509782-20d39509f26d?auto=format&fit=crop&w=1400&q=80"
+          },
+          {
+            kicker: "Photo + Website + Ads",
+            market: "Las Vegas",
+            title: "Desert Luxury Feature",
+            copy: "A complete launch package designed to support websites, social campaigns, and a cleaner brand presentation.",
+            image: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1400&q=80"
+          },
+          {
+            kicker: "Photo + Reel Campaign",
+            market: "Las Vegas",
+            title: "Summerlin Luxe Media Suite",
+            copy: "Polished luxury media crafted for digital marketing, social reach, and stronger listing visibility.",
+            image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80"
+          }
+        ]
+      }
+    };
 
-      <section className="py-20">
-        <Container>
-          <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <SectionHeading
-              eyebrow="Featured"
-              title="Selected work organized by market"
-              text="The homepage now lets visitors jump between Bakersfield, Los Angeles, and Las Vegas so the brand feels more local, intentional, and market-aware."
-            />
-            <button onClick={() => setPage("portfolio")} className="text-sm text-white/85 underline underline-offset-4">
-              View full portfolio
-            </button>
-          </div>
-          <MarketTabs selectedMarket={selectedMarket} setSelectedMarket={setSelectedMarket} className="mb-10" />
-          <div className="grid gap-6 lg:grid-cols-3">
-            {filteredProjects.map((project) => (
-              <div key={project.title} className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03]">
-                <div className="h-72 bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }} />
-                <div className="p-6">
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="text-xs uppercase tracking-[0.3em] text-white/45">{project.category}</div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-white/35">{project.market}</div>
-                  </div>
-                  <h3 className="mt-3 text-2xl font-medium">{project.title}</h3>
-                  <p className="mt-2 text-white/58">{project.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+    const portfolioGrid = document.getElementById("portfolioGrid");
+    const marketTitle = document.getElementById("marketTitle");
+    const marketCopy = document.getElementById("marketCopy");
+    const tabs = document.querySelectorAll(".tab");
 
-      <section className="border-y border-white/10 bg-white/[0.02] py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Services"
-            title="Everything needed for a stronger listing launch"
-            text="Structured around luxury presentation rather than generic media deliverables."
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <div key={service.title} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-7">
-                  <div className="inline-flex rounded-2xl border border-white/10 bg-white/[0.05] p-3">
-                    <Icon size={20} />
-                  </div>
-                  <h3 className="mt-5 text-xl font-medium">{service.title}</h3>
-                  <p className="mt-3 leading-7 text-white/66">{service.text}</p>
-                </div>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Authority"
-            title="A site built to support trust, premium perception, and repeat bookings"
-            text="These sections replace the team, neighborhood, and press blocks from luxury brokerage sites with media-specific proof and positioning."
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              { value: "200+", label: "Listings filmed and delivered" },
-              { value: "Same-Day", label: "Available for select agents and rush launches" },
-              { value: "Luxury", label: "Editorial look across photo, film, and social assets" },
-            ].map((stat) => (
-              <div key={stat.label} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8">
-                <div className="text-4xl font-semibold md:text-5xl">{stat.value}</div>
-                <div className="mt-3 text-white/60">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-y border-white/10 bg-white/[0.02] py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Testimonials"
-            title="What premium clients should feel when they land here"
-            text="Swap these placeholders with your real client feedback to make the site fully production ready."
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <div key={item.name} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8">
-                <p className="leading-8 text-white/72">“{item.quote}”</p>
-                <div className="mt-6 text-sm uppercase tracking-[0.24em] text-white/42">{item.name}</div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-20">
-        <Container>
-          <div className="rounded-[32px] border border-white/10 bg-gradient-to-r from-white/[0.06] to-white/[0.02] p-8 md:p-12">
-            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div>
-                <div className="text-xs uppercase tracking-[0.34em] text-white/45">Ready to launch</div>
-                <h3 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Turn this into your live site with your real media, pricing, and forms.</h3>
-                <p className="mt-5 max-w-2xl text-white/68 leading-8">
-                  The structure is here. The next step is replacing placeholders with your real content and connecting the form, domain, and booking flow.
-                </p>
-              </div>
-              <button onClick={() => setPage("contact")} className="rounded-2xl bg-white px-6 py-4 text-sm font-medium text-black transition hover:opacity-90">
-                Start Inquiry
-              </button>
+    function renderMarket(key){
+      const market = marketData[key];
+      marketTitle.textContent = market.title;
+      marketCopy.textContent = market.copy;
+      portfolioGrid.innerHTML = market.items.map(item => `
+        <article class="card">
+          <div class="card-image" style="background-image:url('${item.image}')"></div>
+          <div class="card-body">
+            <div class="card-kicker">
+              <span>${item.kicker}</span>
+              <span>${item.market}</span>
             </div>
+            <h4>${item.title}</h4>
+            <p>${item.copy}</p>
           </div>
-        </Container>
-      </section>
-    </div>
-  );
-}
-
-function Footer({ setPage }) {
-  return (
-    <footer className="border-t border-white/10 bg-neutral-950">
-      <Container className="grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
-        <div>
-          <div className="text-xs uppercase tracking-[0.42em] text-white/50">{brand.name}</div>
-          <p className="mt-4 max-w-md leading-8 text-white/62">
-            A luxury real estate media website concept built for premium listing presentation, stronger agent branding, and more polished inquiry flow.
-          </p>
-        </div>
-        <div>
-          <div className="text-sm uppercase tracking-[0.25em] text-white/42">Pages</div>
-          <div className="mt-4 space-y-3 text-white/72">
-            {navItems.map((item) => (
-              <button key={item.id} onClick={() => setPage(item.id)} className="block text-left transition hover:text-white">
-                {item.label}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="text-sm uppercase tracking-[0.25em] text-white/42">Contact</div>
-          <div className="mt-4 space-y-3 text-white/72">
-            <p>{brand.email}</p>
-            <p>{brand.phone}</p>
-            <p>{brand.instagram}</p>
-            <p>{brand.website}</p>
-          </div>
-        </div>
-      </Container>
-    </footer>
-  );
-}
-
-export default function IndigoxphotoLuxuryWebsite() {
-  const [page, setPage] = useState("home");
-
-  const currentPage = useMemo(() => {
-    switch (page) {
-      case "portfolio":
-        return <PortfolioPage />;
-      case "services":
-        return <ServicesPage setPage={setPage} />;
-      case "about":
-        return <AboutPage setPage={setPage} />;
-      case "insights":
-        return <InsightsPage />;
-      case "contact":
-        return <ContactPage />;
-      default:
-        return <HomePage setPage={setPage} />;
+        </article>
+      `).join("");
     }
-  }, [page]);
 
-  return (
-    <div className="min-h-screen bg-neutral-950 text-white selection:bg-white selection:text-black">
-      <Header page={page} setPage={setPage} />
-      <main>{currentPage}</main>
-      <Footer setPage={setPage} />
-    </div>
-  );
-}
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        renderMarket(tab.dataset.market);
+      });
+    });
+
+    renderMarket("bakersfield");
+  </script>
+</body>
+</html>
