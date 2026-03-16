@@ -19,7 +19,7 @@ const marketData = {
   bakersfield: {
     title: "Bakersfield",
     subtitle: "",
-    copy: "Bakersfield is one of the core markets Indigoxphoto serves, with listing media built for agents who want cleaner presentation, stronger marketing, and a more premium first impression.",
+    copy: "Bakersfield is the home base, covering everything from everyday listings to higher-end homes across the city with polished media designed to work at every price point.",
     cards: [
       {
         kicker: "Seven Oaks Style Campaign",
@@ -47,7 +47,7 @@ const marketData = {
   losangeles: {
     title: "Los Angeles",
     subtitle: "",
-    copy: "Los Angeles is served with a more editorial approach, designed for agents and listings that need modern presentation, architectural storytelling, and a cleaner luxury feel.",
+    copy: "Los Angeles coverage runs from the Hollywood Hills to the San Fernando Valley, with a more editorial approach built for listings that need refined presentation, cleaner branding, and a stronger luxury feel.",
     cards: [
       {
         kicker: "Hollywood Hills Style",
@@ -75,7 +75,7 @@ const marketData = {
   lasvegas: {
     title: "Las Vegas",
     subtitle: "",
-    copy: "Las Vegas is served with cinematic listing media built for dramatic presentation, luxury architecture, and launch content that feels polished across web, MLS, and social media.",
+    copy: "Las Vegas coverage includes everything from everyday listings to higher-end properties across Henderson, Summerlin, and Ascaya, with media built to handle both fast-moving homes and stronger luxury presentation.",
     cards: [
       {
         kicker: "Showcase Film",
