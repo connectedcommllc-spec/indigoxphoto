@@ -96,7 +96,7 @@ const marketData = {
         market: "Las Vegas",
         title: "High-impact listing launch",
         text: "Perfect for luxury desert architecture, dramatic twilight scenes, and visually led brand positioning across digital channels.",
-        image: "assets/Las Vegas/DJI_0841-HDR.jpeg"
+        image: "assets/Las Vegas/DSC05057-HDR.jpeg"
       }
     ]
   }
