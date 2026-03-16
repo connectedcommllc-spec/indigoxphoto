@@ -633,6 +633,11 @@ textarea.field{
   line-height:1.8;
   max-width:320px;
 }
+.footer-social a{
+  color:#fff;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
 .footer-heading{
   font-size:12px;
   letter-spacing:.28em;
