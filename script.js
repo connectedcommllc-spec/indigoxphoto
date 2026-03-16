@@ -19,7 +19,7 @@ const marketData = {
   bakersfield: {
     title: "Bakersfield",
     subtitle: "",
-    copy: "Bakersfield is one of the core markets IndigoXPhoto serves, with listing media built for agents who want cleaner presentation, stronger marketing, and a more premium first impression.",
+    copy: "Bakersfield is one of the core markets Indigoxphoto serves, with listing media built for agents who want cleaner presentation, stronger marketing, and a more premium first impression.",
     cards: [
       {
         kicker: "Seven Oaks Style Campaign",
