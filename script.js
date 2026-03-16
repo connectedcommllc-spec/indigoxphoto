@@ -18,8 +18,8 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 const marketData = {
   bakersfield: {
     title: "Bakersfield",
-    subtitle: "Luxury real estate photography in Bakersfield",
-    copy: "Built around Bakersfield real estate photography, videography, reels, drone, Matterport 3D tours, Zillow Showcase, and twilight media for agents who want stronger presentation and a cleaner luxury image.",
+    subtitle: "",
+    copy: "Bakersfield is one of the core markets IndigoXPhoto serves, with listing media built for agents who want cleaner presentation, stronger marketing, and a more premium first impression.",
     cards: [
       {
         kicker: "Seven Oaks Style Campaign",
@@ -46,8 +46,8 @@ const marketData = {
   },
   losangeles: {
     title: "Los Angeles",
-    subtitle: "Design-forward media for Los Angeles listings",
-    copy: "Editorial real estate visuals for Los Angeles agents who want architecture, styling, mood, and luxury brand image to feel more refined, modern, and elevated.",
+    subtitle: "",
+    copy: "Los Angeles is served with a more editorial approach, designed for agents and listings that need modern presentation, architectural storytelling, and a cleaner luxury feel.",
     cards: [
       {
         kicker: "Hollywood Hills Style",
@@ -74,8 +74,8 @@ const marketData = {
   },
   lasvegas: {
     title: "Las Vegas",
-    subtitle: "Luxury real estate media in Las Vegas",
-    copy: "Premium listing visuals for Las Vegas agents who want dramatic presentation, stronger online perception, and cleaner launch materials for modern luxury properties.",
+    subtitle: "",
+    copy: "Las Vegas is served with cinematic listing media built for dramatic presentation, luxury architecture, and launch content that feels polished across web, MLS, and social media.",
     cards: [
       {
         kicker: "Showcase Film",
