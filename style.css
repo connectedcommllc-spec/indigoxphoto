@@ -225,7 +225,7 @@ h1,h2,h3,h4,p{margin:0}
   display:grid;
   gap:22px;
 }
-.hero-stats{grid-template-columns:repeat(3,1fr);margin-top:50px}
+.hero-stats{grid-template-columns:repeat(3,minmax(0,320px));justify-content:center;margin-top:50px}
 .grid-4{grid-template-columns:repeat(4,1fr)}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .grid-2{grid-template-columns:repeat(2,1fr)}
