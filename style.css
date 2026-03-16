@@ -330,6 +330,18 @@ h1,h2,h3,h4,p{margin:0}
   width:max-content;
   animation:marqueeScroll 28s linear infinite;
 }
+.logo-mark{
+  height:28px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+  filter:brightness(0) invert(1);
+  opacity:.9;
+  flex:0 0 auto;
+}
+.logo-mark-wsj{
+  height:24px;
+}
 .logo-wordmark{
   color:rgba(255,255,255,.86);
   font-size:clamp(15px, 2vw, 22px);
