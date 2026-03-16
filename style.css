@@ -65,8 +65,10 @@ h1,h2,h3,h4,p{margin:0}
   line-height:1.8;
 }
 .topbar{
-  position:sticky;
+  position:fixed;
   top:0;
+  left:0;
+  right:0;
   z-index:40;
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(14px);
