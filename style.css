@@ -242,6 +242,7 @@ h1,h2,h3,h4,p{margin:0}
 }
 .stat{
   padding:24px;
+  text-align:center;
 }
 .stat strong{
   display:block;
