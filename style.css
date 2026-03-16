@@ -342,6 +342,9 @@ h1,h2,h3,h4,p{margin:0}
 .logo-mark-wsj{
   height:24px;
 }
+.logo-mark-mansions{
+  height:34px;
+}
 .logo-wordmark{
   color:rgba(255,255,255,.86);
   font-size:clamp(15px, 2vw, 22px);
