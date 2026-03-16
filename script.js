@@ -33,7 +33,7 @@ const marketData = {
         market: "Bakersfield",
         title: "Launch content for social and MLS",
         text: "A refined package built around twilight imagery, reels, and polished stills that make the listing feel more expensive from the first scroll.",
-        image: "assets/Bakersfield/46-web-or-mls-DJI_0886.jpg"
+        image: "assets/Bakersfield/1-web-or-mls-Photo-3300.jpg"
       },
       {
         kicker: "Matterport + Video",
