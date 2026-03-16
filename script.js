@@ -135,3 +135,58 @@ document.querySelectorAll('.market-tab').forEach((btn) => {
 if(document.getElementById('marketGrid')){
   renderMarket('bakersfield');
 }
+
+function applyRevealTargets(){
+  const selectors = [
+    '.hero-pill',
+    '.hero h1',
+    '.hero p',
+    '.hero-actions',
+    '.hero-stats .stat',
+    '.section .eyebrow',
+    '.section .section-title',
+    '.section .section-copy',
+    '.card',
+    '.quote',
+    '.reel-tip',
+    '.faq-item',
+    '.info-card',
+    '.form-card',
+    '.about-image',
+    '.about-copy',
+    '.logo-marquee'
+  ];
+
+  selectors.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((el, index) => {
+      if (!el.classList.contains('reveal')) {
+        el.classList.add('reveal');
+        const mod = index % 3;
+        if (mod === 1) el.classList.add('reveal-delay-1');
+        if (mod === 2) el.classList.add('reveal-delay-2');
+      }
+    });
+  });
+}
+
+applyRevealTargets();
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px'
+});
+
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hero .reveal').forEach((el, index) => {
+    setTimeout(() => el.classList.add('in-view'), 120 + index * 90);
+  });
+});
