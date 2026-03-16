@@ -298,6 +298,9 @@ h1,h2,h3,h4,p{margin:0}
   overflow:hidden;
   padding:34px 0 26px;
 }
+.featured-strip-inline{
+  margin-top:34px;
+}
 .featured-strip-inner{
   display:grid;
   gap:14px;
