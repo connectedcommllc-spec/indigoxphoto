@@ -26,21 +26,21 @@ const marketData = {
         market: "Bakersfield",
         title: "Luxury estate presentation",
         text: "Cinematic stills and video designed to slow buyers down, elevate detail, and create a more premium first impression online.",
-        image: "https://images.unsplash.com/photo-1600607687644-c7f34f0c806f?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Bakersfield/3-web-or-mls-Photo-3140.jpg"
       },
       {
         kicker: "Twilight + Reels",
         market: "Bakersfield",
         title: "Launch content for social and MLS",
         text: "A refined package built around twilight imagery, reels, and polished stills that make the listing feel more expensive from the first scroll.",
-        image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Bakersfield/46-web-or-mls-DJI_0886.jpg"
       },
       {
         kicker: "Matterport + Video",
         market: "Bakersfield",
         title: "Full-stack listing media",
         text: "Perfect for higher-end Bakersfield launches where agents need premium visuals, layout understanding, and social-ready assets.",
-        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Bakersfield/5-web-or-mls-DJI_0920.jpg"
       }
     ]
   },
@@ -54,21 +54,21 @@ const marketData = {
         market: "Los Angeles",
         title: "Editorial property marketing",
         text: "Luxury media designed for stronger presentation, higher-end branding, and a more expensive-looking online first impression.",
-        image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Los Angeles/DSC07625-HDR.jpg"
       },
       {
         kicker: "Film + Website",
         market: "Los Angeles",
         title: "Architectural listing story",
         text: "A cinematic launch built around modern interiors, premium detail, and cleaner market positioning for design-conscious listings.",
-        image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Los Angeles/DSC08170-HDR.jpg"
       },
       {
         kicker: "Reels + Twilight",
         market: "Los Angeles",
         title: "Luxury digital launch package",
         text: "Best for agents who need vertical content, polished stills, and a presentation style that feels brokerage-level rather than generic.",
-        image: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Los Angeles/DSC07645-HDR.jpg"
       }
     ]
   },
@@ -82,21 +82,21 @@ const marketData = {
         market: "Las Vegas",
         title: "Desert luxury visual campaign",
         text: "Designed to create mood, atmosphere, and stronger perceived value for upscale Las Vegas properties and luxury neighborhoods.",
-        image: "https://images.unsplash.com/photo-1600047509782-20d39509f26d?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Las Vegas/DSC05042-HDR.jpeg"
       },
       {
         kicker: "Photo + Ads",
         market: "Las Vegas",
         title: "Premium website and social rollout",
         text: "A polished media package that supports listing websites, ad creatives, social launch, and stronger seller-facing presentation.",
-        image: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Las Vegas/DJI_20240412182520_0049_D-2-HDR.jpg"
       },
       {
         kicker: "Reels + Drone",
         market: "Las Vegas",
         title: "High-impact listing launch",
         text: "Perfect for luxury desert architecture, dramatic twilight scenes, and visually led brand positioning across digital channels.",
-        image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80"
+        image: "assets/Las Vegas/DJI_0841-HDR.jpeg"
       }
     ]
   }
