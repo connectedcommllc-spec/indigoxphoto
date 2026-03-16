@@ -351,9 +351,8 @@ h1,h2,h3,h4,p{margin:0}
 .logo-mark-robb{
   height:36px;
   width:auto;
-  max-width:420px;
-  transform:scale(1.85);
-  transform-origin:center;
+  max-width:320px;
+  transform:none;
 }
 .logo-wordmark-mansions{
   font-size:clamp(18px, 2.2vw, 26px);
