@@ -294,6 +294,53 @@ h1,h2,h3,h4,p{margin:0}
   text-decoration:underline;
   text-underline-offset:4px;
 }
+.featured-strip{
+  overflow:hidden;
+}
+.logo-marquee{
+  position:relative;
+  overflow:hidden;
+  margin-top:24px;
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+  padding:22px 0;
+}
+.logo-marquee::before,
+.logo-marquee::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:90px;
+  z-index:2;
+  pointer-events:none;
+}
+.logo-marquee::before{
+  left:0;
+  background:linear-gradient(90deg, rgba(13,13,13,1), rgba(13,13,13,0));
+}
+.logo-marquee::after{
+  right:0;
+  background:linear-gradient(270deg, rgba(13,13,13,1), rgba(13,13,13,0));
+}
+.logo-track{
+  display:flex;
+  align-items:center;
+  gap:54px;
+  width:max-content;
+  animation:marqueeScroll 28s linear infinite;
+}
+.logo-wordmark{
+  color:rgba(255,255,255,.86);
+  font-size:clamp(15px, 2vw, 22px);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+@keyframes marqueeScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
 .market-tabs{
   display:flex;
   flex-wrap:wrap;
