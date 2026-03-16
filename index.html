@@ -418,15 +418,18 @@ function PortfolioSection({ selectedMarket, setSelectedMarket, compact = false }
         <p className="max-w-2xl text-white/65 leading-8">{data.copy}</p>
       </div>
       <div className="mt-3 text-sm text-white/45">{data.servicesNote}</div>
-      <div className="mt-10 grid gap-6 lg:grid-cols-3">
-        <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={selectedMarket}
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.25 }}
+          className="mt-10 grid gap-6 lg:grid-cols-3"
+        >
           {projects.map((project) => (
             <motion.article
               key={`${selectedMarket}-${project.title}`}
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.25 }}
               whileHover={{ y: -5 }}
               className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/20"
             >
@@ -442,8 +445,8 @@ function PortfolioSection({ selectedMarket, setSelectedMarket, compact = false }
               </div>
             </motion.article>
           ))}
-        </AnimatePresence>
-      </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
