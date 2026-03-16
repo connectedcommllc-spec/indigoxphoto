@@ -337,26 +337,26 @@ h1,h2,h3,h4,p{margin:0}
   animation:marqueeScroll 28s linear infinite;
 }
 .logo-mark{
-  height:28px;
+  height:32px;
   width:auto;
-  max-width:180px;
+  max-width:200px;
   object-fit:contain;
   filter:brightness(0) invert(1);
   opacity:.9;
   flex:0 0 auto;
 }
 .logo-mark-wsj{
-  height:24px;
+  height:28px;
 }
 .logo-mark-robb{
-  height:28px;
+  height:32px;
   width:auto;
-  max-width:300px;
+  max-width:320px;
   transform:scale(1.55);
   transform-origin:center;
 }
 .logo-wordmark-mansions{
-  font-size:clamp(16px, 2vw, 24px);
+  font-size:clamp(18px, 2.2vw, 26px);
   letter-spacing:.22em;
 }
 .logo-wordmark{
