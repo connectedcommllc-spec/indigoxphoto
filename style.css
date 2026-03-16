@@ -349,14 +349,15 @@ h1,h2,h3,h4,p{margin:0}
   height:24px;
 }
 .logo-mark-robb{
-  height:36px;
+  height:28px;
   width:auto;
-  max-width:none;
+  max-width:300px;
+  transform:scale(1.55);
+  transform-origin:center;
 }
-.logo-mark-mansions{
-  height:34px;
-  filter:brightness(0) invert(1);
-  opacity:1;
+.logo-wordmark-mansions{
+  font-size:clamp(16px, 2vw, 24px);
+  letter-spacing:.22em;
 }
 .logo-wordmark{
   color:rgba(255,255,255,.86);
