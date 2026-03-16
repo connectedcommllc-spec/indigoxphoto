@@ -296,12 +296,20 @@ h1,h2,h3,h4,p{margin:0}
 }
 .featured-strip{
   overflow:hidden;
+  padding:34px 0 26px;
+}
+.featured-strip-inner{
+  display:grid;
+  gap:14px;
+}
+.featured-label{
+  text-align:center;
+  color:rgba(255,255,255,.54);
 }
 .logo-marquee{
   position:relative;
   overflow:hidden;
-  margin-top:24px;
-  padding:10px 0;
+  padding:8px 0;
 }
 .logo-marquee::before,
 .logo-marquee::after{
