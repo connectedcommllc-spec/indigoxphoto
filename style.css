@@ -70,7 +70,7 @@ h1,h2,h3,h4,p{margin:0}
   z-index:40;
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(14px);
-  background:rgba(8,8,8,.78);
+  background:transparent;
 }
 .nav{
   min-height:90px;
