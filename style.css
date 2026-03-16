@@ -343,11 +343,14 @@ h1,h2,h3,h4,p{margin:0}
   height:24px;
 }
 .logo-mark-robb{
-  height:28px;
-  max-width:240px;
+  height:36px;
+  width:auto;
+  max-width:none;
 }
 .logo-mark-mansions{
   height:34px;
+  filter:brightness(0) invert(1);
+  opacity:1;
 }
 .logo-wordmark{
   color:rgba(255,255,255,.86);
