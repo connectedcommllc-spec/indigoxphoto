@@ -190,3 +190,35 @@ window.addEventListener('load', () => {
     setTimeout(() => el.classList.add('in-view'), 120 + index * 90);
   });
 });
+
+function animateCount(el) {
+  const target = Number(el.dataset.count || 0);
+  const duration = 1400;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(target * eased).toString();
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.textContent = target.toString();
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.why-stat-number').forEach((num, index) => {
+        setTimeout(() => animateCount(num), index * 120);
+      });
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.35 });
+
+document.querySelectorAll('.why-stats').forEach((el) => statObserver.observe(el));

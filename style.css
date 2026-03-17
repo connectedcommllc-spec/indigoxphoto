@@ -348,6 +348,33 @@ h1,h2,h3,h4,p{margin:0}
 .featured-strip-inline{
   margin-top:34px;
 }
+.why-stats{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.why-stat-card{
+  padding:28px 22px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.why-stat-number{
+  font-size:clamp(44px, 6vw, 82px);
+  line-height:.95;
+  letter-spacing:-.06em;
+  color:#fff;
+}
+.why-stat-label{
+  margin-top:12px;
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--soft);
+}
 .featured-strip-inner{
   display:grid;
   gap:14px;
@@ -730,7 +757,7 @@ textarea.field{
   .nav-links,.nav-cta{display:none}
   .mobile-panel.open{display:block}
   .hero-inner{min-height:auto}
-  .grid-4,.grid-3,.grid-2,.hero-stats,.about-wrap,.contact-wrap,.bullets,.footer-grid{grid-template-columns:1fr}
+  .grid-4,.grid-3,.grid-2,.hero-stats,.about-wrap,.contact-wrap,.bullets,.footer-grid,.why-stats{grid-template-columns:1fr}
   .market-intro{flex-direction:column;align-items:flex-start}
   .hero{padding-bottom:0}
   .footer-bottom{flex-direction:column;align-items:flex-start}
