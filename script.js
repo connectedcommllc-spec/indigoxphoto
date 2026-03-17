@@ -223,3 +223,37 @@ const statObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.35 });
 
 document.querySelectorAll('.why-stats').forEach((el) => statObserver.observe(el));
+
+function renderPortfolio(filter = 'all') {
+  const grid = document.getElementById('portfolioGridClean');
+  if (!grid || !window.portfolioData) return;
+  const items = (window.portfolioData[filter] || []).slice(0, 18);
+  grid.innerHTML = items.map((item) => `
+    <div class="portfolio-item reveal">
+      <img src="${item.src}" alt="${item.city} ${item.category} portfolio image">
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-meta">
+          <span>${item.city}</span>
+          <span>${item.category === 'floorplan' ? 'Floor Plan' : item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  document.querySelectorAll('#portfolioGridClean .reveal').forEach((el, index) => {
+    const mod = index % 3;
+    if (mod === 1) el.classList.add('reveal-delay-1');
+    if (mod === 2) el.classList.add('reveal-delay-2');
+    revealObserver.observe(el);
+  });
+}
+
+if (document.getElementById('portfolioGridClean')) {
+  renderPortfolio('all');
+  document.querySelectorAll('.filter-chip').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderPortfolio(btn.dataset.filter);
+    });
+  });
+}

@@ -9,74 +9,43 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="topbar">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Indigoxphoto logo">
-    </a>
-    <nav class="nav-links"><a class="" href="index.html">Home</a><a class="" href="markets.html">Markets</a><a class="active" href="portfolio.html">Portfolio</a><a class="" href="services.html">Services</a><a class="" href="about.html">About</a><a class="" href="contact.html">Contact</a></nav>
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Indigoxphoto logo"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="markets.html">Markets</a>
+      <a class="active" href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <a class="nav-cta" href="https://indigophotolv.aryeo.com/order-forms/019a343b-0b39-70de-ab45-06da502228d7">Book a Shoot</a>
     <button class="mobile-toggle">Menu</button>
   </div>
-  <div class="container mobile-panel"><a class="" href="index.html">Home</a><a class="" href="markets.html">Markets</a><a class="active" href="portfolio.html">Portfolio</a><a class="" href="services.html">Services</a><a class="" href="about.html">About</a><a class="" href="contact.html">Contact</a></div>
+  <div class="container mobile-panel">
+    <a href="index.html">Home</a>
+    <a href="markets.html">Markets</a>
+    <a class="active" href="portfolio.html">Portfolio</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </header>
 
 <section class="section">
   <div class="container">
     <div class="eyebrow">Portfolio</div>
-    <h1 class="section-title">A portfolio built to show range, polish, and premium presentation.</h1>
-    <p class="section-copy">This portfolio highlights the level of finish Indigoxphoto brings to each listing — from clean editorial interiors to dramatic twilight visuals, drone coverage, and full launch-ready media packages across Bakersfield, Los Angeles, and Las Vegas.</p>
-    <div class="grid-3" style="margin-top:40px">
-      <div class="card">
-        <div class="card-image" style="background-image:url('assets/Bakersfield/3-web-or-mls-Photo-3140.jpg')"></div>
-        <div class="card-body">
-          <div class="card-kicker"><span>Cinematic Listing Campaign</span><span>Bakersfield</span></div>
-          <h3>Luxury estate launch</h3>
-          <p>A refined stills and motion package built to show flow, mood, architecture, and the emotional feel of living in the home.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('assets/Los Angeles/DSC07625-HDR.jpg')"></div>
-        <div class="card-body">
-          <div class="card-kicker"><span>Editorial Presentation</span><span>Los Angeles</span></div>
-          <h3>Modern interior story</h3>
-          <p>Built for a more architectural luxury feel, combining strong composition, premium detail, and a cleaner brand impression for the agent.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('assets/Las Vegas/DSC05042-HDR.jpeg')"></div>
-        <div class="card-body">
-          <div class="card-kicker"><span>Twilight + Drone</span><span>Las Vegas</span></div>
-          <h3>Luxury desert launch</h3>
-          <p>Designed to create high visual impact through dramatic exterior mood, twilight presentation, and strong spatial storytelling.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('assets/Bakersfield/1-web-or-mls-Photo-3301.jpg')"></div>
-        <div class="card-body">
-          <div class="card-kicker"><span>Matterport + Reels</span><span>Luxury listing</span></div>
-          <h3>Full-stack media package</h3>
-          <p>Best for listings that need stills, cinematic walkthroughs, vertical social content, and spatial understanding all at once.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('assets/Los Angeles/DSC08170-HDR.jpg')"></div>
-        <div class="card-body">
-          <div class="card-kicker"><span>Luxury interior detail</span><span>Editorial</span></div>
-          <h3>Architecture and mood</h3>
-          <p>Strong premium photography does more than document finishes. It gives the property atmosphere, scale, and visual identity online.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('assets/Las Vegas/DSC05032-HDR.jpeg')"></div>
-        <div class="card-body">
-          <div class="card-kicker"><span>Brand positioning</span><span>High-end</span></div>
-          <h3>Social-ready luxury rollout</h3>
-          <p>Content built for listing launches where the photography, reels, drone, and presentation all need to feel cohesive and premium.</p>
-        </div>
-      </div>
+    <h1 class="section-title">A cleaner visual library of the work.</h1>
+    <p class="section-copy">Browse the portfolio by category. This keeps the work focused, visual, and easy to explore without repeating the same images from the homepage and market pages.</p>
+    <div class="portfolio-filters reveal reveal-delay-1">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="exterior">Exterior</button>
+      <button class="filter-chip" data-filter="drone">Drone</button>
+      <button class="filter-chip" data-filter="twilight">Twilight</button>
+      <button class="filter-chip" data-filter="floorplan">Floor Plans</button>
     </div>
+    <div class="portfolio-grid-clean" id="portfolioGridClean"></div>
   </div>
 </section>
 
@@ -113,6 +82,7 @@
     <span>Bakersfield • Los Angeles • Las Vegas</span>
   </div>
 </footer>
+<script src="portfolio-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
