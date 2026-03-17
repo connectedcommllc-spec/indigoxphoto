@@ -19,7 +19,7 @@ const marketData = {
   bakersfield: {
     title: "Bakersfield",
     subtitle: "",
-    copy: "Bakersfield is the home base, covering everything from everyday listings to higher-end homes across the city with polished media designed to work at every price point.",
+    copy: "Bakersfield is the home base, covering everything from everyday listings to higher-end homes across the city with photography, video, drone coverage, reels, Matterport, and Zillow 3D for properties at every price point.",
     cards: [
       {
         kicker: "Property Photography",
@@ -47,7 +47,7 @@ const marketData = {
   losangeles: {
     title: "Los Angeles",
     subtitle: "",
-    copy: "Los Angeles coverage runs from the Hollywood Hills to the San Fernando Valley, with a more editorial approach built for listings that need refined presentation, cleaner branding, and a stronger luxury feel.",
+    copy: "Los Angeles coverage runs from the Hollywood Hills to the San Fernando Valley, with a stronger luxury focus for listings that need refined presentation, cleaner branding, and a more editorial feel, while still offering media for a wide range of properties.",
     cards: [
       {
         kicker: "Editorial Listing Media",
@@ -75,7 +75,7 @@ const marketData = {
   lasvegas: {
     title: "Las Vegas",
     subtitle: "",
-    copy: "Las Vegas coverage includes everything from everyday listings to higher-end properties across Henderson, Summerlin, and Ascaya, with media built to handle both fast-moving homes and stronger luxury presentation.",
+    copy: "Las Vegas coverage includes everything from everyday listings to higher-end properties across Henderson, Summerlin, and Ascaya, with a stronger luxury focus while still providing polished media for a wide range of homes.",
     cards: [
       {
         kicker: "Luxury Listing Media",
