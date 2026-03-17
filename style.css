@@ -763,10 +763,57 @@ textarea.field{
   .mobile-toggle{display:inline-flex}
   .nav-links,.nav-cta{display:none}
   .mobile-panel.open{display:block}
-  .hero-inner{min-height:auto}
+  .hero-inner{
+    min-height:auto;
+    padding:170px 0 42px;
+  }
+  .hero-content{
+    max-width:100%;
+  }
+  .hero h1{
+    font-size:clamp(30px, 10vw, 46px);
+    line-height:1.02;
+  }
+  .hero p{
+    font-size:15px;
+    line-height:1.7;
+    max-width:100%;
+  }
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .brand img{
+    height:60px;
+  }
   .grid-4,.grid-3,.grid-2,.hero-stats,.about-wrap,.contact-wrap,.bullets,.footer-grid,.why-stats{grid-template-columns:1fr}
+  .why-stat-card{
+    padding:18px 8px;
+  }
   .why-stat-card:not(:last-child)::after{display:none}
+  .logo-marquee::before,
+  .logo-marquee::after{
+    width:36px;
+  }
+  .logo-track{
+    gap:34px;
+  }
   .market-intro{flex-direction:column;align-items:flex-start}
   .hero{padding-bottom:0}
   .footer-bottom{flex-direction:column;align-items:flex-start}
+  .site-footer{
+    padding:34px 0 24px;
+  }
+}
+@media (max-width: 520px){
+  .hero-inner{padding:156px 0 36px}
+  .hero h1{font-size:34px}
+  .hero p{font-size:14px}
+  .section{padding:72px 0}
+  .card-body,
+  .info-card,
+  .form-card,
+  .reel-tip{padding:22px}
+  .why-stat-number{font-size:56px}
+  .why-stat-label{font-size:11px}
 }
