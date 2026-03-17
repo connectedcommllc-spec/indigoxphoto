@@ -193,7 +193,7 @@ window.addEventListener('load', () => {
 
 function animateCount(el) {
   const target = Number(el.dataset.count || 0);
-  const duration = 2400;
+  const duration = 3000;
   const start = performance.now();
 
   function tick(now) {
