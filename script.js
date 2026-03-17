@@ -22,24 +22,24 @@ const marketData = {
     copy: "Bakersfield is the home base, covering everything from everyday listings to higher-end homes across the city with polished media designed to work at every price point.",
     cards: [
       {
-        kicker: "Seven Oaks Style Campaign",
+        kicker: "Property Photography",
         market: "Bakersfield",
-        title: "Luxury estate presentation",
-        text: "Cinematic stills and video designed to slow buyers down, elevate detail, and create a more premium first impression online.",
+        title: "Polished listing presentation",
+        text: "Clean, refined visuals built to give Bakersfield listings a stronger first impression across MLS, websites, and social media.",
         image: "assets/Bakersfield/3-web-or-mls-Photo-3140.jpg"
       },
       {
-        kicker: "Twilight + Reels",
+        kicker: "Photo + Social Content",
         market: "Bakersfield",
-        title: "Launch content for social and MLS",
-        text: "A refined package built around twilight imagery, reels, and polished stills that make the listing feel more expensive from the first scroll.",
+        title: "Marketing content for modern listings",
+        text: "A flexible media package designed to support listing launches, social promotion, and a more elevated overall presentation.",
         image: "assets/Bakersfield/1-web-or-mls-Photo-3300.jpg"
       },
       {
-        kicker: "Matterport + Video",
+        kicker: "Drone + Listing Media",
         market: "Bakersfield",
-        title: "Full-stack listing media",
-        text: "Perfect for higher-end Bakersfield launches where agents need premium visuals, layout understanding, and social-ready assets.",
+        title: "Full-service visual coverage",
+        text: "Built for Bakersfield listings that need a complete presentation with photography, aerial coverage, and stronger marketing assets.",
         image: "assets/Bakersfield/5-web-or-mls-DJI_0920.jpg"
       }
     ]
@@ -50,24 +50,24 @@ const marketData = {
     copy: "Los Angeles coverage runs from the Hollywood Hills to the San Fernando Valley, with a more editorial approach built for listings that need refined presentation, cleaner branding, and a stronger luxury feel.",
     cards: [
       {
-        kicker: "Hollywood Hills Style",
+        kicker: "Editorial Listing Media",
         market: "Los Angeles",
-        title: "Editorial property marketing",
-        text: "Luxury media designed for stronger presentation, higher-end branding, and a more expensive-looking online first impression.",
+        title: "Refined property presentation",
+        text: "Luxury-focused visuals designed to give Los Angeles listings a cleaner, more elevated look across digital marketing and listing launches.",
         image: "assets/Los Angeles/DSC07625-HDR.jpg"
       },
       {
-        kicker: "Film + Website",
+        kicker: "Photo + Video",
         market: "Los Angeles",
-        title: "Architectural listing story",
-        text: "A cinematic launch built around modern interiors, premium detail, and cleaner market positioning for design-conscious listings.",
+        title: "Architectural and lifestyle coverage",
+        text: "A polished approach built for homes that need strong interiors, premium detail, and a more design-forward presentation.",
         image: "assets/Los Angeles/DSC08170-HDR.jpg"
       },
       {
-        kicker: "Reels + Twilight",
+        kicker: "Social + Listing Assets",
         market: "Los Angeles",
-        title: "Luxury digital launch package",
-        text: "Best for agents who need vertical content, polished stills, and a presentation style that feels brokerage-level rather than generic.",
+        title: "Digital launch support",
+        text: "Built for agents who want polished stills, social-ready content, and a presentation style that feels clean, modern, and premium.",
         image: "assets/Los Angeles/DSC07645-HDR.jpg"
       }
     ]
@@ -78,24 +78,24 @@ const marketData = {
     copy: "Las Vegas coverage includes everything from everyday listings to higher-end properties across Henderson, Summerlin, and Ascaya, with media built to handle both fast-moving homes and stronger luxury presentation.",
     cards: [
       {
-        kicker: "Showcase Film",
+        kicker: "Luxury Listing Media",
         market: "Las Vegas",
-        title: "Desert luxury visual campaign",
-        text: "Designed to create mood, atmosphere, and stronger perceived value for upscale Las Vegas properties and luxury neighborhoods.",
+        title: "Elevated visual presentation",
+        text: "Designed to create a stronger first impression for Las Vegas listings with polished photography, premium detail, and a clean luxury feel.",
         image: "assets/Las Vegas/DSC05042-HDR.jpeg"
       },
       {
-        kicker: "Photo + Ads",
+        kicker: "Photo + Marketing Assets",
         market: "Las Vegas",
-        title: "Premium website and social rollout",
-        text: "A polished media package that supports listing websites, ad creatives, social launch, and stronger seller-facing presentation.",
+        title: "Website and social support",
+        text: "A polished media package built to support listing websites, social promotion, and a stronger overall presentation for agents and sellers.",
         image: "assets/Las Vegas/DJI_20240412182520_0049_D-2-HDR.jpg"
       },
       {
-        kicker: "Reels + Drone",
+        kicker: "Reels + Drone Coverage",
         market: "Las Vegas",
-        title: "High-impact listing launch",
-        text: "Perfect for luxury desert architecture, dramatic twilight scenes, and visually led brand positioning across digital channels.",
+        title: "Strong launch content",
+        text: "Built for listings that need visual impact, cleaner branding, and media that performs across MLS, websites, and social channels.",
         image: "assets/Las Vegas/DSC05057-HDR.jpeg"
       }
     ]
