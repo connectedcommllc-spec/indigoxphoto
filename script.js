@@ -214,7 +214,8 @@ const statObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.querySelectorAll('.why-stat-number').forEach((num, index) => {
-        setTimeout(() => animateCount(num), index * 120);
+        const delay = index === 2 ? 0 : index * 120;
+        setTimeout(() => animateCount(num), delay);
       });
       statObserver.unobserve(entry.target);
     }
