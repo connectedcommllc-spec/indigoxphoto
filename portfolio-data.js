@@ -58,7 +58,7 @@ window.portfolioData = {
         "category": "exterior"
       },
       {
-        "src": "assets/Bakersfield/10017-roehampton-ave-bakersfield-ca-93312/images-for-web-or-mls/16-web-or-mls-DSC08917 virtually staged.jpeg",
+        "src": "assets/Bakersfield/10017-roehampton-ave-bakersfield-ca-93312/images-for-web-or-mls/16-web-or-mls-DSC08917%20virtually%20staged.jpeg",
         "city": "Bakersfield",
         "category": "exterior"
       },
@@ -190,134 +190,134 @@ window.portfolioData = {
     "interior": [],
     "exterior": [
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/1-print-Photo-1248.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/1-print-Photo-1248.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/10-print-Photo-1220.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/10-print-Photo-1220.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/11-print-Photo-1228.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/11-print-Photo-1228.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/12-print-Photo-1227.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/12-print-Photo-1227.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/13-print-Photo-1234.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/13-print-Photo-1234.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/14-print-Photo-1232.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/14-print-Photo-1232.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/15-print-Photo-1233.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/15-print-Photo-1233.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/16-print-Photo-1217.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/16-print-Photo-1217.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/17-print-Photo-1223.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/17-print-Photo-1223.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/18-print-Photo-1225.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/18-print-Photo-1225.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/19-print-Photo-1224.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/19-print-Photo-1224.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/2-print-Photo-1252.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/2-print-Photo-1252.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/20-print-Photo-1226.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/20-print-Photo-1226.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/21-print-Photo-1237.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/21-print-Photo-1237.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/22-print-Photo-1222.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/22-print-Photo-1222.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/23-print-DSC01175.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/23-print-DSC01175.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/24-print-Photo-1235.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/24-print-Photo-1235.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/25-print-Photo-1238.jpg",
+        "src": "assets/Los%20Angeles/27410-n-merlin-pl-101-valencia-ca-91355/images-for-printing/25-print-Photo-1238.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       }
     ],
     "aerial": [
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/1-web-or-mls-DJI_0417.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/1-web-or-mls-DJI_0417.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/2-web-or-mls-DJI_0422.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/2-web-or-mls-DJI_0422.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/3-web-or-mls-DJI_0427.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/3-web-or-mls-DJI_0427.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/4-web-or-mls-DJI_0432.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/4-web-or-mls-DJI_0432.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/5-web-or-mls-DJI_0435.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/5-web-or-mls-DJI_0435.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/6-web-or-mls-DJI_0442.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/6-web-or-mls-DJI_0442.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/7-web-or-mls-DJI_0447.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/7-web-or-mls-DJI_0447.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       },
       {
-        "src": "assets/Los Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/8-web-or-mls-DJI_0452.jpg",
+        "src": "assets/Los%20Angeles/2796-n-meredith-st-orange-ca-92867/images-for-web-or-mls/8-web-or-mls-DJI_0452.jpg",
         "city": "Los Angeles",
         "category": "aerial"
       }
@@ -326,276 +326,276 @@ window.portfolioData = {
   "Las Vegas": {
     "interior": [
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC05985.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC05985.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC05995.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC05995.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06000.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06000.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06010.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06010.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06015.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06015.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06020.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06020.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06025.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06025.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06040.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06040.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06045.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06045.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06050.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06050.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06065.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06065.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06070.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06070.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06075.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06075.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06080.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06080.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06090.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06090.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06100.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06100.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06127.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06127.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/Theo Photos Interior/DSC06130.jpg",
+        "src": "assets/Las%20Vegas/Theo%20Photos%20Interior/DSC06130.jpg",
         "city": "Las Vegas",
         "category": "interior"
       }
     ],
     "exterior": [
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_001.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_001.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_002.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_002.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_003.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_003.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_004.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_004.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_005.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_005.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_006.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_006.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_007.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_007.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_008.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_008.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_009.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_009.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_010.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_010.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_011.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_011.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_012.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_012.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_013.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_013.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_014.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_014.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_015.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_015.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_016.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_016.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_017.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_017.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/13 Dovetail May 2025/MLS Final/Photo_018.jpg",
+        "src": "assets/Las%20Vegas/13%20Dovetail%20May%202025/MLS%20Final/Photo_018.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       }
     ],
     "aerial": [
       {
-        "src": "assets/Las Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/1-web-or-mls-DJI_0005.jpg",
+        "src": "assets/Las%20Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/1-web-or-mls-DJI_0005.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/2-web-or-mls-DJI_0020.jpg",
+        "src": "assets/Las%20Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/2-web-or-mls-DJI_0020.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/54-web-or-mls-DJI_0220_with_grass.jpg",
+        "src": "assets/Las%20Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/54-web-or-mls-DJI_0220_with_grass.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/56-web-or-mls-DJI_0235_with_grass.jpg",
+        "src": "assets/Las%20Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/56-web-or-mls-DJI_0235_with_grass.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/67-web-or-mls-DJI_0240_with_grass.jpg",
+        "src": "assets/Las%20Vegas/4022-heron-fairway-dr-las-vegas-nv-89141/images-for-web-or-mls/67-web-or-mls-DJI_0240_with_grass.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/50-print-DJI_0288_re_edit_0d5bbb8b-5b24-4566-bdca-31d65fe09bcd.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/50-print-DJI_0288_re_edit_0d5bbb8b-5b24-4566-bdca-31d65fe09bcd.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/51-print-DJI_0283_re_edit_2e09ec74-3f82-4484-a8e3-4e705664b9e7.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/51-print-DJI_0283_re_edit_2e09ec74-3f82-4484-a8e3-4e705664b9e7.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/53-print-DJI_0273.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/53-print-DJI_0273.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/54-print-DJI_0268_re_edit_6024c82d-3a38-4ad2-9b5d-6f23f6474fd6.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-printing/54-print-DJI_0268_re_edit_6024c82d-3a38-4ad2-9b5d-6f23f6474fd6.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/50-web-or-mls-DJI_0288_re_edit_0d5bbb8b-5b24-4566-bdca-31d65fe09bcd.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/50-web-or-mls-DJI_0288_re_edit_0d5bbb8b-5b24-4566-bdca-31d65fe09bcd.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/51-web-or-mls-DJI_0283_re_edit_2e09ec74-3f82-4484-a8e3-4e705664b9e7.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/51-web-or-mls-DJI_0283_re_edit_2e09ec74-3f82-4484-a8e3-4e705664b9e7.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/53-web-or-mls-DJI_0273.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/53-web-or-mls-DJI_0273.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/54-web-or-mls-DJI_0268_re_edit_6024c82d-3a38-4ad2-9b5d-6f23f6474fd6.jpg",
+        "src": "assets/Las%20Vegas/5555-painted-mirage-rd-las-vegas-nv-89149/images-for-web-or-mls/54-web-or-mls-DJI_0268_re_edit_6024c82d-3a38-4ad2-9b5d-6f23f6474fd6.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0001.jpg",
+        "src": "assets/Las%20Vegas/DJI_0001.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0006.jpg",
+        "src": "assets/Las%20Vegas/DJI_0006.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0021.jpg",
+        "src": "assets/Las%20Vegas/DJI_0021.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0046.jpg",
+        "src": "assets/Las%20Vegas/DJI_0046.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0061.jpg",
+        "src": "assets/Las%20Vegas/DJI_0061.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       }
