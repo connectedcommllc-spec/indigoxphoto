@@ -36,14 +36,17 @@
 <section class="section">
   <div class="container">
     <div class="eyebrow">Portfolio</div>
-    <h1 class="section-title">A cleaner visual library of the work.</h1>
-    <p class="section-copy">Browse the portfolio by category. This keeps the work focused, visual, and easy to explore without repeating the same images from the homepage and market pages.</p>
-    <div class="portfolio-filters reveal reveal-delay-1">
-      <button class="filter-chip active" data-filter="all">All</button>
-      <button class="filter-chip" data-filter="exterior">Exterior</button>
-      <button class="filter-chip" data-filter="drone">Drone</button>
-      <button class="filter-chip" data-filter="twilight">Twilight</button>
-      <button class="filter-chip" data-filter="floorplan">Floor Plans</button>
+    <h1 class="section-title">Explore the work by city and category.</h1>
+    <p class="section-copy">Choose a city first, then browse a cleaner set of interiors, exteriors, and aerials without repeating the same homepage and market images.</p>
+    <div class="portfolio-filters reveal reveal-delay-1" id="portfolioCityFilters">
+      <button class="filter-chip active" data-city="Bakersfield">Bakersfield</button>
+      <button class="filter-chip" data-city="Los Angeles">Los Angeles</button>
+      <button class="filter-chip" data-city="Las Vegas">Las Vegas</button>
+    </div>
+    <div class="portfolio-filters reveal reveal-delay-2" id="portfolioTypeFilters" style="margin-top:14px">
+      <button class="filter-chip active" data-type="exterior">Exterior</button>
+      <button class="filter-chip" data-type="interior">Interior</button>
+      <button class="filter-chip" data-type="aerial">Aerial</button>
     </div>
     <div class="portfolio-grid-clean" id="portfolioGridClean"></div>
   </div>

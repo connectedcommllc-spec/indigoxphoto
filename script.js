@@ -224,17 +224,17 @@ const statObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.why-stats').forEach((el) => statObserver.observe(el));
 
-function renderPortfolio(filter = 'all') {
+function renderPortfolio(city = 'Bakersfield', type = 'exterior') {
   const grid = document.getElementById('portfolioGridClean');
-  if (!grid || !window.portfolioData) return;
-  const items = (window.portfolioData[filter] || []).slice(0, 18);
+  if (!grid || !window.portfolioData || !window.portfolioData[city]) return;
+  const items = (window.portfolioData[city][type] || []).slice(0, 18);
   grid.innerHTML = items.map((item) => `
     <div class="portfolio-item reveal">
       <img src="${item.src}" alt="${item.city} ${item.category} portfolio image">
       <div class="portfolio-item-overlay">
         <div class="portfolio-item-meta">
           <span>${item.city}</span>
-          <span>${item.category === 'floorplan' ? 'Floor Plan' : item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
+          <span>${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
         </div>
       </div>
     </div>
@@ -248,12 +248,25 @@ function renderPortfolio(filter = 'all') {
 }
 
 if (document.getElementById('portfolioGridClean')) {
-  renderPortfolio('all');
-  document.querySelectorAll('.filter-chip').forEach((btn) => {
+  let currentCity = 'Bakersfield';
+  let currentType = 'exterior';
+  renderPortfolio(currentCity, currentType);
+
+  document.querySelectorAll('#portfolioCityFilters .filter-chip').forEach((btn) => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-chip').forEach((b) => b.classList.remove('active'));
+      document.querySelectorAll('#portfolioCityFilters .filter-chip').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      renderPortfolio(btn.dataset.filter);
+      currentCity = btn.dataset.city;
+      renderPortfolio(currentCity, currentType);
+    });
+  });
+
+  document.querySelectorAll('#portfolioTypeFilters .filter-chip').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#portfolioTypeFilters .filter-chip').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentType = btn.dataset.type;
+      renderPortfolio(currentCity, currentType);
     });
   });
 }
