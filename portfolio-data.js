@@ -221,11 +221,6 @@ window.portfolioData = {
         "category": "aerial"
       },
       {
-        "src": "assets/Bakersfield/Aerial/Photo-2170.jpg",
-        "city": "Bakersfield",
-        "category": "aerial"
-      },
-      {
         "src": "assets/Bakersfield/Aerial/Photo-234.jpg",
         "city": "Bakersfield",
         "category": "aerial"
