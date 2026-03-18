@@ -224,13 +224,33 @@ const statObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.why-stats').forEach((el) => statObserver.observe(el));
 
+function getAvailablePortfolioTypes(city) {
+  if (!window.portfolioData || !window.portfolioData[city]) return [];
+  return ['exterior', 'interior', 'aerial'].filter((type) => (window.portfolioData[city][type] || []).length > 0);
+}
+
+function syncPortfolioTypeFilters(city, activeType) {
+  const available = getAvailablePortfolioTypes(city);
+  document.querySelectorAll('#portfolioTypeFilters .filter-chip').forEach((btn) => {
+    const enabled = available.includes(btn.dataset.type);
+    btn.style.display = enabled ? '' : 'none';
+    btn.classList.toggle('active', enabled && btn.dataset.type === activeType);
+  });
+}
+
 function renderPortfolio(city = 'Bakersfield', type = 'exterior') {
   const grid = document.getElementById('portfolioGridClean');
-  if (!grid || !window.portfolioData || !window.portfolioData[city]) return;
-  const items = (window.portfolioData[city][type] || []).slice(0, 18);
+  if (!grid || !window.portfolioData || !window.portfolioData[city]) return type;
+
+  const available = getAvailablePortfolioTypes(city);
+  const safeType = available.includes(type) ? type : (available[0] || 'exterior');
+  const items = (window.portfolioData[city][safeType] || []).slice(0, 18);
+
+  syncPortfolioTypeFilters(city, safeType);
+
   grid.innerHTML = items.map((item) => `
     <div class="portfolio-item reveal">
-      <img src="${item.src}" alt="${item.city} ${item.category} portfolio image">
+      <img src="${item.src}" alt="${item.city} ${item.category} portfolio image" loading="lazy" onerror="this.closest('.portfolio-item')?.remove()">
       <div class="portfolio-item-overlay">
         <div class="portfolio-item-meta">
           <span>${item.city}</span>
@@ -239,34 +259,35 @@ function renderPortfolio(city = 'Bakersfield', type = 'exterior') {
       </div>
     </div>
   `).join('');
+
   document.querySelectorAll('#portfolioGridClean .reveal').forEach((el, index) => {
     const mod = index % 3;
     if (mod === 1) el.classList.add('reveal-delay-1');
     if (mod === 2) el.classList.add('reveal-delay-2');
     revealObserver.observe(el);
   });
+
+  return safeType;
 }
 
 if (document.getElementById('portfolioGridClean')) {
   let currentCity = 'Bakersfield';
   let currentType = 'exterior';
-  renderPortfolio(currentCity, currentType);
+  currentType = renderPortfolio(currentCity, currentType);
 
   document.querySelectorAll('#portfolioCityFilters .filter-chip').forEach((btn) => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('#portfolioCityFilters .filter-chip').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       currentCity = btn.dataset.city;
-      renderPortfolio(currentCity, currentType);
+      currentType = renderPortfolio(currentCity, currentType);
     });
   });
 
   document.querySelectorAll('#portfolioTypeFilters .filter-chip').forEach((btn) => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('#portfolioTypeFilters .filter-chip').forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
       currentType = btn.dataset.type;
-      renderPortfolio(currentCity, currentType);
+      currentType = renderPortfolio(currentCity, currentType);
     });
   });
 }
