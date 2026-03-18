@@ -96,7 +96,7 @@ const marketData = {
         market: "Las Vegas",
         title: "Strong launch content",
         text: "Built for listings that need visual impact, cleaner branding, and media that performs across MLS, websites, and social channels.",
-        image: "assets/Las Vegas/Aerial/DJI_0314-HDR.jpg"
+        image: "assets/Las Vegas/Aerial/DJI_0404-HDR.jpg"
       }
     ]
   }
