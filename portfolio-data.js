@@ -17,7 +17,17 @@ window.portfolioData = {
         "category": "exterior"
       },
       {
+        "src": "assets/Bakersfield/Exterior/10-web-or-mls-Photo-3153.jpeg",
+        "city": "Bakersfield",
+        "category": "exterior"
+      },
+      {
         "src": "assets/Bakersfield/Exterior/2-web-or-mls-DSC02095.jpg",
+        "city": "Bakersfield",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Bakersfield/Exterior/2-web-or-mls-Photo-3299.jpg",
         "city": "Bakersfield",
         "category": "exterior"
       },
@@ -27,7 +37,17 @@ window.portfolioData = {
         "category": "exterior"
       },
       {
+        "src": "assets/Bakersfield/Exterior/3-web-or-mls-Photo-3146.jpeg",
+        "city": "Bakersfield",
+        "category": "exterior"
+      },
+      {
         "src": "assets/Bakersfield/Exterior/4-web-or-mls-Photo-3142.jpg",
+        "city": "Bakersfield",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Bakersfield/Exterior/8-web-or-mls-Photo-3152.jpeg",
         "city": "Bakersfield",
         "category": "exterior"
       },
@@ -84,12 +104,22 @@ window.portfolioData = {
         "category": "interior"
       },
       {
+        "src": "assets/Bakersfield/Interior/34-web-or-mls-Photo-3173.jpg",
+        "city": "Bakersfield",
+        "category": "interior"
+      },
+      {
         "src": "assets/Bakersfield/Interior/41-web-or-mls-Photo-3072.jpg",
         "city": "Bakersfield",
         "category": "interior"
       },
       {
         "src": "assets/Bakersfield/Interior/42-web-or-mls-Photo-3073.jpg",
+        "city": "Bakersfield",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Bakersfield/Interior/50-web-or-mls-Photo-3083.jpg",
         "city": "Bakersfield",
         "category": "interior"
       },
