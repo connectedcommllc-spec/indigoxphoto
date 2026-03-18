@@ -240,6 +240,16 @@ window.portfolioData = {
   "Los Angeles": {
     "exterior": [
       {
+        "src": "assets/Los Angeles/Interior/1-web-or-mls-Photo-1248.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/Interior/2-web-or-mls-Photo-1252.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
         "src": "assets/Los Angeles/Exterior/1-web-or-mls-Photo-1248.jpg",
         "city": "Los Angeles",
         "category": "exterior"
@@ -326,16 +336,6 @@ window.portfolioData = {
       }
     ],
     "interior": [
-      {
-        "src": "assets/Los Angeles/Interior/1-web-or-mls-Photo-1248.jpg",
-        "city": "Los Angeles",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Los Angeles/Interior/2-web-or-mls-Photo-1252.jpg",
-        "city": "Los Angeles",
-        "category": "interior"
-      },
       {
         "src": "assets/Los Angeles/Interior/25A7A481-A051-48F0-BBE1-EE30A52B8454.jpg",
         "city": "Los Angeles",
