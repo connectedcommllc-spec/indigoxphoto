@@ -291,6 +291,3 @@ if (document.getElementById('portfolioGridClean')) {
     });
   });
 }
-});
-  });
-}
