@@ -61,14 +61,14 @@ const marketData = {
         market: "Los Angeles",
         title: "Architectural and lifestyle coverage",
         text: "A polished approach built for homes that need strong interiors, premium detail, and a more design-forward presentation.",
-        image: "assets/Los Angeles/Interior/DSC07625-HDR.jpg"
+        image: "assets/Los Angeles/Interior/Photo-5016.jpg"
       },
       {
         kicker: "Social + Listing Assets",
         market: "Los Angeles",
         title: "Digital launch support",
         text: "Built for agents who want polished stills, social-ready content, and a presentation style that feels clean, modern, and premium.",
-        image: "assets/Los Angeles/Aerial/23-web-or-mls-Photo-1367.jpg"
+        image: "assets/Los Angeles/Aerial/Photo-3962.jpg"
       }
     ]
   },
