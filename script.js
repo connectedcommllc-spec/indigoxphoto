@@ -26,21 +26,21 @@ const marketData = {
         market: "Bakersfield",
         title: "Everyday listings to luxury homes",
         text: "Coverage across Bakersfield for everything from standard listings to higher-end properties, all with the same polished presentation.",
-        image: "assets/Bakersfield/46-web-or-mls-DJI_0886.jpg"
+        image: "assets/Bakersfield/Exterior/1-web-or-mls-Photo-3139.jpg"
       },
       {
         kicker: "Services",
         market: "Bakersfield",
         title: "Photo, video, drone, reels, 3D",
         text: "Photography, video, drone coverage, reels, Matterport, and Zillow 3D for agents who want stronger listing media across every price point.",
-        image: "assets/Bakersfield/46-web-or-mls-Photo-3079.jpg"
+        image: "assets/Bakersfield/Aerial/105-web-or-mls-Photo-3137.jpg"
       },
       {
         kicker: "Presentation",
         market: "Bakersfield",
         title: "Professional media at every price point",
         text: "The goal is the same on every Bakersfield property: make the listing look clean, competitive, and more elevated online.",
-        image: "assets/Bakersfield/1-web-or-mls-Photo-3300.jpg"
+        image: "assets/Bakersfield/Interior/33-web-or-mls-Photo-3169.jpg"
       }
     ]
   },
@@ -54,21 +54,21 @@ const marketData = {
         market: "Los Angeles",
         title: "Refined property presentation",
         text: "Luxury-focused visuals designed to give Los Angeles listings a cleaner, more elevated look across digital marketing and listing launches.",
-        image: "assets/Los Angeles/DSC08170-HDR.jpg"
+        image: "assets/Los Angeles/Exterior/DSC08025-HDR.jpg"
       },
       {
         kicker: "Photo + Video",
         market: "Los Angeles",
         title: "Architectural and lifestyle coverage",
         text: "A polished approach built for homes that need strong interiors, premium detail, and a more design-forward presentation.",
-        image: "assets/Los Angeles/DSC08170-HDR.jpg"
+        image: "assets/Los Angeles/Interior/DSC07625-HDR.jpg"
       },
       {
         kicker: "Social + Listing Assets",
         market: "Los Angeles",
         title: "Digital launch support",
         text: "Built for agents who want polished stills, social-ready content, and a presentation style that feels clean, modern, and premium.",
-        image: "assets/Los Angeles/DSC07625-HDR.jpg"
+        image: "assets/Los Angeles/Aerial/23-web-or-mls-Photo-1367.jpg"
       }
     ]
   },
@@ -82,21 +82,21 @@ const marketData = {
         market: "Las Vegas",
         title: "Elevated visual presentation",
         text: "Designed to create a stronger first impression for Las Vegas listings with polished photography, premium detail, and a clean luxury feel.",
-        image: "assets/Las Vegas/DJI_20240412182520_0049_D-2-HDR.jpg"
+        image: "assets/Las Vegas/Exterior/DSC05062-HDR.jpeg"
       },
       {
         kicker: "Photo + Marketing Assets",
         market: "Las Vegas",
         title: "Website and social support",
         text: "A polished media package built to support listing websites, social promotion, and a stronger overall presentation for agents and sellers.",
-        image: "assets/Las Vegas/DJI_20240412182520_0049_D-2-HDR.jpg"
+        image: "assets/Las Vegas/Interior/14-web-or-mls-Photo-2780.jpg"
       },
       {
         kicker: "Reels + Drone Coverage",
         market: "Las Vegas",
         title: "Strong launch content",
         text: "Built for listings that need visual impact, cleaner branding, and media that performs across MLS, websites, and social channels.",
-        image: "assets/Las Vegas/DSC05032-HDR.jpeg"
+        image: "assets/Las Vegas/Aerial/DJI_0314-HDR.jpg"
       }
     ]
   }
