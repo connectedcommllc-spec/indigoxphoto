@@ -7,22 +7,7 @@ window.portfolioData = {
         "category": "exterior"
       },
       {
-        "src": "assets/Bakersfield/1-web-or-mls-Photo-3300.jpg",
-        "city": "Bakersfield",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Bakersfield/10-web-or-mls-Photo-3153.jpeg",
-        "city": "Bakersfield",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Bakersfield/11-web-or-mls-Photo-3154.jpeg",
-        "city": "Bakersfield",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Bakersfield/3-web-or-mls-Photo-3140.jpg",
+        "src": "assets/Bakersfield/2-web-or-mls-Photo-3299.jpg",
         "city": "Bakersfield",
         "category": "exterior"
       },
@@ -32,12 +17,7 @@ window.portfolioData = {
         "category": "exterior"
       },
       {
-        "src": "assets/Bakersfield/4-web-or-mls-Photo-3147.jpeg",
-        "city": "Bakersfield",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Bakersfield/5-web-or-mls-DSC01865.jpg",
+        "src": "assets/Bakersfield/4-web-or-mls-Photo-3142.jpg",
         "city": "Bakersfield",
         "category": "exterior"
       },
@@ -45,36 +25,26 @@ window.portfolioData = {
         "src": "assets/Bakersfield/5-web-or-mls-Photo-3148.jpeg",
         "city": "Bakersfield",
         "category": "exterior"
+      },
+      {
+        "src": "assets/Bakersfield/6-web-or-mls-Photo-3149.jpeg",
+        "city": "Bakersfield",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Bakersfield/7-web-or-mls-Photo-3150.jpeg",
+        "city": "Bakersfield",
+        "category": "exterior"
       }
     ],
     "interior": [
-      {
-        "src": "assets/Bakersfield/10-web-or-mls-DSC01890.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/12-web-or-mls-DSC01905.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/12-web-or-mls-Photo-3159.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
       {
         "src": "assets/Bakersfield/14-web-or-mls-DSC01915.jpg",
         "city": "Bakersfield",
         "category": "interior"
       },
       {
-        "src": "assets/Bakersfield/20-web-or-mls-DSC01940.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/21-web-or-mls-DSC01945.jpg",
+        "src": "assets/Bakersfield/16-web-or-mls-Photo-3164.jpg",
         "city": "Bakersfield",
         "category": "interior"
       },
@@ -84,42 +54,12 @@ window.portfolioData = {
         "category": "interior"
       },
       {
-        "src": "assets/Bakersfield/24-web-or-mls-DSC01970.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
         "src": "assets/Bakersfield/25-web-or-mls-DSC01980.jpg",
         "city": "Bakersfield",
         "category": "interior"
       },
       {
-        "src": "assets/Bakersfield/29-web-or-mls-DSC02000.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
         "src": "assets/Bakersfield/33-web-or-mls-Photo-3169.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/34-web-or-mls-DSC02025.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/34-web-or-mls-Photo-3173.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/41-web-or-mls-Photo-3072.jpg",
-        "city": "Bakersfield",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Bakersfield/43-web-or-mls-Photo-3076.jpg",
         "city": "Bakersfield",
         "category": "interior"
       },
@@ -134,17 +74,12 @@ window.portfolioData = {
         "category": "interior"
       },
       {
-        "src": "assets/Bakersfield/50-web-or-mls-Photo-3083.jpg",
+        "src": "assets/Bakersfield/49-web-or-mls-Photo-3082.jpg",
         "city": "Bakersfield",
         "category": "interior"
       }
     ],
     "aerial": [
-      {
-        "src": "assets/Bakersfield/3-web-or-mls-Photo-3296.jpg",
-        "city": "Bakersfield",
-        "category": "aerial"
-      },
       {
         "src": "assets/Bakersfield/4-web-or-mls-DJI_0915.jpg",
         "city": "Bakersfield",
@@ -156,12 +91,7 @@ window.portfolioData = {
         "category": "aerial"
       },
       {
-        "src": "assets/Bakersfield/45-web-or-mls-DJI_0881.jpg",
-        "city": "Bakersfield",
-        "category": "aerial"
-      },
-      {
-        "src": "assets/Bakersfield/46-web-or-mls-DJI_0886.jpg",
+        "src": "assets/Bakersfield/6-web-or-mls-DJI_0925.jpg",
         "city": "Bakersfield",
         "category": "aerial"
       }
@@ -170,12 +100,52 @@ window.portfolioData = {
   "Los Angeles": {
     "exterior": [
       {
-        "src": "assets/Los Angeles/DSC07630-HDR.jpg",
+        "src": "assets/Los Angeles/1-web-or-mls-Photo-1248.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
       {
-        "src": "assets/Los Angeles/DSC07745-HDR.jpg",
+        "src": "assets/Los Angeles/31-web-or-mls-Photo-1245.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/39-web-or-mls-Photo-1246.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/40-web-or-mls-Photo-1244.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/2-web-or-mls-Photo-1363.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/20-web-or-mls-Photo-1351.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/33-web-or-mls-Photo-1361.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/DSC07650-HDR.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/DSC08020-HDR.jpg",
+        "city": "Los Angeles",
+        "category": "exterior"
+      },
+      {
+        "src": "assets/Los Angeles/DSC08025-HDR.jpg",
         "city": "Los Angeles",
         "category": "exterior"
       },
@@ -187,57 +157,97 @@ window.portfolioData = {
     ],
     "interior": [
       {
-        "src": "assets/Los Angeles/DSC03293.jpg",
+        "src": "assets/Los Angeles/5-web-or-mls-Photo-1216.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC03333.jpg",
+        "src": "assets/Los Angeles/6-web-or-mls-Photo-1221.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC03343.jpg",
+        "src": "assets/Los Angeles/10-web-or-mls-Photo-1220.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC03378.jpg",
+        "src": "assets/Los Angeles/16-web-or-mls-Photo-1217.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC04190-HDR.jpg",
+        "src": "assets/Los Angeles/19-web-or-mls-Photo-1224.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC04930-HDR.jpg",
+        "src": "assets/Los Angeles/20-web-or-mls-Photo-1226.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC05636.jpg",
+        "src": "assets/Los Angeles/21-web-or-mls-Photo-1237.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC05666.jpg",
+        "src": "assets/Los Angeles/23-web-or-mls-DSC01175.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC05716.jpg",
+        "src": "assets/Los Angeles/30-web-or-mls-Photo-1243.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC05736.jpg",
+        "src": "assets/Los Angeles/32-web-or-mls-Photo-1229.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC05891.jpg",
+        "src": "assets/Los Angeles/34-web-or-mls-Photo-1239.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/12-web-or-mls-Photo-1336.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/16-web-or-mls-Photo-1339.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/18-web-or-mls-Photo-1352.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/26-web-or-mls-Photo-1353.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/31-web-or-mls-Photo-1364.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/39-web-or-mls-Photo-1373.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/42-web-or-mls-Photo-1370.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/43-web-or-mls-Photo-1369.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
@@ -247,32 +257,12 @@ window.portfolioData = {
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC07570-HDR.jpg",
+        "src": "assets/Los Angeles/DSC07625-HDR.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC07580-HDR.jpg",
-        "city": "Los Angeles",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Los Angeles/DSC07605-HDR.jpg",
-        "city": "Los Angeles",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Los Angeles/DSC07650-HDR.jpg",
-        "city": "Los Angeles",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Los Angeles/DSC07665-HDR.jpg",
-        "city": "Los Angeles",
-        "category": "interior"
-      },
-      {
-        "src": "assets/Los Angeles/DSC07680-HDR.jpg",
+        "src": "assets/Los Angeles/DSC07675-HDR.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
@@ -282,7 +272,7 @@ window.portfolioData = {
         "category": "interior"
       },
       {
-        "src": "assets/Los Angeles/DSC07730-HDR.jpg",
+        "src": "assets/Los Angeles/DSC08160-HDR.jpg",
         "city": "Los Angeles",
         "category": "interior"
       },
@@ -290,103 +280,119 @@ window.portfolioData = {
         "src": "assets/Los Angeles/DSC08165-HDR.jpg",
         "city": "Los Angeles",
         "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/DSC08170-HDR.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Los Angeles/DSC08175-HDR.jpg",
+        "city": "Los Angeles",
+        "category": "interior"
       }
     ],
-    "aerial": []
+    "aerial": [
+      {
+        "src": "assets/Los Angeles/23-web-or-mls-Photo-1367.jpg",
+        "city": "Los Angeles",
+        "category": "aerial"
+      },
+      {
+        "src": "assets/Los Angeles/30-web-or-mls-Photo-1346.jpg",
+        "city": "Los Angeles",
+        "category": "aerial"
+      }
+    ]
   },
   "Las Vegas": {
     "exterior": [
       {
-        "src": "assets/Las Vegas/DJI_0006.jpg",
+        "src": "assets/Las Vegas/1-web-or-mls-Photo-2823.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/DJI_0061.jpg",
+        "src": "assets/Las Vegas/55-web-or-mls-Photo-2821.jpg",
         "city": "Las Vegas",
         "category": "exterior"
       },
       {
-        "src": "assets/Las Vegas/DJI_0159-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DJI_0214-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DJI_0234-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DJI_0254-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DJI_0289-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DJI_0324-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DSC03960-HDR.jpg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/DSC05012-HDR.jpeg",
-        "city": "Las Vegas",
-        "category": "exterior"
-      },
-      {
-        "src": "assets/Las Vegas/Hero.jpg",
+        "src": "assets/Las Vegas/DSC05062-HDR.jpeg",
         "city": "Las Vegas",
         "category": "exterior"
       }
     ],
     "interior": [
       {
-        "src": "assets/Las Vegas/DSC00098.jpg",
+        "src": "assets/Las Vegas/1-web-or-mls-DSC00013.jpg",
         "city": "Las Vegas",
         "category": "interior"
       },
       {
-        "src": "assets/Las Vegas/DSC00133.jpg",
+        "src": "assets/Las Vegas/14-web-or-mls-DSC00088.jpg",
+        "city": "Las Vegas",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Las Vegas/14-web-or-mls-Photo-2780.jpg",
+        "city": "Las Vegas",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Las Vegas/20-web-or-mls-DSC00118.jpg",
+        "city": "Las Vegas",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Las Vegas/31-web-or-mls-DSC09887.jpg",
+        "city": "Las Vegas",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Las Vegas/33-web-or-mls-DSC09897.jpg",
+        "city": "Las Vegas",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Las Vegas/42-web-or-mls-DSC09942.jpg",
+        "city": "Las Vegas",
+        "category": "interior"
+      },
+      {
+        "src": "assets/Las Vegas/44-web-or-mls-DSC09952.jpg",
         "city": "Las Vegas",
         "category": "interior"
       }
     ],
     "aerial": [
       {
-        "src": "assets/Las Vegas/DJI_0169-HDR.jpg",
+        "src": "assets/Las Vegas/35-web-or-mls-DSC09907.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0178.jpg",
+        "src": "assets/Las Vegas/37-web-or-mls-Photo-2798.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_0189-HDR.jpg",
+        "src": "assets/Las Vegas/43-web-or-mls-DSC09947.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_20240412183839_0100_D-2-HDR.jpg",
+        "src": "assets/Las Vegas/48-web-or-mls-Photo-2808.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       },
       {
-        "src": "assets/Las Vegas/DJI_20240814114508_0011_D-HDR.jpg",
+        "src": "assets/Las Vegas/DJI_0314-HDR.jpg",
+        "city": "Las Vegas",
+        "category": "aerial"
+      },
+      {
+        "src": "assets/Las Vegas/DJI_20240412184024_0110_D-2-HDR.jpg",
         "city": "Las Vegas",
         "category": "aerial"
       }
