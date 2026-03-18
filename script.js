@@ -40,7 +40,7 @@ const marketData = {
         market: "Bakersfield",
         title: "Professional media at every price point",
         text: "The goal is the same on every Bakersfield property: make the listing look clean, competitive, and more elevated online.",
-        image: "assets/Bakersfield/Interior/33-web-or-mls-Photo-3169.jpg"
+        image: "assets/Bakersfield/Interior/34-web-or-mls-Photo-3173.jpg"
       }
     ]
   },
@@ -89,7 +89,7 @@ const marketData = {
         market: "Las Vegas",
         title: "Website and social support",
         text: "A polished media package built to support listing websites, social promotion, and a stronger overall presentation for agents and sellers.",
-        image: "assets/Las Vegas/Interior/14-web-or-mls-Photo-2780.jpg"
+        image: "assets/Las Vegas/Interior/DSC04190-HDR.jpg"
       },
       {
         kicker: "Reels + Drone Coverage",
@@ -289,5 +289,8 @@ if (document.getElementById('portfolioGridClean')) {
       currentType = btn.dataset.type;
       currentType = renderPortfolio(currentCity, currentType);
     });
+  });
+}
+});
   });
 }
