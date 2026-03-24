@@ -4,7 +4,7 @@
 
 ## About
 
-Indigoxphoto is a real estate media company focused on premium visual storytelling for property listings. The goal is to help agents present listings at a higher level with polished photography, cinematic video, social-ready content, and a cleaner overall marketing presence.
+Indigoxphoto is a real estate media company founded by Theo Ayala, based in Bakersfield, CA. With over 5 years of experience and 4–5 shoots per day across all of Bakersfield, Indigoxphoto is one of the most active real estate media providers in the market. The focus is premium visual storytelling for property listings — helping agents present homes, ranches, large lots, and commercial properties at a higher level with polished photography, cinematic video, social-ready content, and a cleaner overall marketing presence.
 
 ## Services
 
@@ -44,4 +44,5 @@ Indigoxphoto is a real estate media company focused on premium visual storytelli
 - Markets: https://indigoxphoto.com/markets.html
 - About: https://indigoxphoto.com/about.html
 - Contact: https://indigoxphoto.com/contact.html
+- Blog: https://indigoxphoto.com/blog.html
 - Sitemap: https://indigoxphoto.com/sitemap.xml
